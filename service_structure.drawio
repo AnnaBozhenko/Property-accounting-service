@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-24T15:31:37.024Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="MNtKrAARaMiWAerrLnhf" version="22.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-24T15:59:17.568Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="qB_AMBhdxTKyyHxPVTP7" version="22.0.6" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="3183" dy="1204" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1368" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1331,6 +1331,33 @@
         </mxCell>
         <mxCell id="-895iV7O0eAqNIdXnYbH-26" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="-547" y="5880" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-27" value="Функції" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1770" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-28" value="облік наявності, руху, якості (технічний стан) майна" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1635" y="190" width="165" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-29" value="розрахунок перерозподілу військового &lt;br&gt;майна (між органами управління, військовими частинами, центрами забезпечення)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1618" y="310" width="272" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-30" value="розробка &lt;br&gt;рознарядок на видачу&lt;br&gt;(з центрів забезпеченя)&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1888" y="250" width="162" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-31" value="розробка звітів та донесень щодо забезпечення майном за видом служби забезпечення&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="410" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-32" value="&amp;nbsp;вести облік &lt;br&gt;постачання майна&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-33" value="облік виконання плнів ремонту" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1780" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-34" value="облік траспорту з військовим майном" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-895iV7O0eAqNIdXnYbH-35" value="формувати загальну статистику забезпечення майном" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1890" y="650" width="190" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
