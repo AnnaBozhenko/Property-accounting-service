@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-28T11:39:16.916Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="sSGfwdWxSFszLd8ztdMg" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-28T12:52:15.694Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="PCdsBZQnxzMIoXMtC9vJ" version="22.0.8" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="4700" dy="2649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3200" dy="1874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1751,8 +1751,104 @@
         <mxCell id="9HAyfnWmdtINX-8KZ9jP-68" value="&lt;b&gt;Мінометна батарея&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="4430" y="2735" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9HAyfnWmdtINX-8KZ9jP-69" value="вести&lt;br&gt;облік мінометів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-69" value="отримати звіт &lt;br&gt;обліку мінометів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="4670" y="2740" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-72" target="9HAyfnWmdtINX-8KZ9jP-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-72" value="Старший технік" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4520" y="2910" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-73" value="вести облік запчастин, обладнання для ремонту мінометної техніки та обладнання батареї" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4575" y="2980" width="175" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-75" target="9HAyfnWmdtINX-8KZ9jP-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-75" value="Санітарний &lt;br&gt;інструктор" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4770" y="2840" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-76" value="вести облік медичного обладнання ( аптечки, носилки, дефібрилятори тощо)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4845" y="2880" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-77" value="&lt;b&gt;Протитанковий взвод (ПТВ)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="4560" y="3144" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-78" value="Командир ПТВ" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4600" y="3205" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-80" value="отримати звіт &lt;br&gt;обліку бойової техніки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4670" y="3144" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.331;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-78" target="9HAyfnWmdtINX-8KZ9jP-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-82" value="Старший водій" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4510" y="3328" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-83" value="вести облік транспорту та&amp;nbsp; протитанкової техніки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4650" y="3337.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.021;entryY=0.628;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-82" target="9HAyfnWmdtINX-8KZ9jP-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-86" target="9HAyfnWmdtINX-8KZ9jP-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-86" value="Водій" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4810" y="3234" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-87" value="вести облік протитанкової техніки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4840" y="3349" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-89" value="&lt;b&gt;Відділення ПТВ&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="4550" y="3620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-90" target="9HAyfnWmdtINX-8KZ9jP-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-90" value="Командир Відділення&lt;br&gt;&amp;nbsp;(КВ ПТВ)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4430" y="3593" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-93" value="вести облік протитанкової техніки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4259" y="3657.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-95" value="Старший водій" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4440" y="3737.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-96" value="вести облік транспорту та&amp;nbsp; протитанкової техніки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4580" y="3747" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.021;entryY=0.628;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-95" target="9HAyfnWmdtINX-8KZ9jP-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-99" value="грантометне відділення (ГВ)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="4945" y="3573" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-100" target="9HAyfnWmdtINX-8KZ9jP-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-100" value="Командир відділення &lt;br&gt;(КВ ГВ)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4870" y="3613" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-101" value="вести облік гранатометів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4980" y="3705" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9HAyfnWmdtINX-8KZ9jP-103" target="9HAyfnWmdtINX-8KZ9jP-105">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4910" y="3818" />
+              <mxPoint x="4910" y="3858" />
+              <mxPoint x="4925" y="3858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-103" value="Командир&lt;br&gt;&amp;nbsp;гранатомету" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="4830" y="3758" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HAyfnWmdtINX-8KZ9jP-105" value="вести облік гранатометів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4865" y="3897.5" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
