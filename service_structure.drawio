@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-29T00:00:19.898Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="7B-tHD2kJzteQYX1oW7I" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-29T00:02:01.874Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="pf-Rs4_rhpSdMbWFUpBu" version="22.0.8" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
     <mxGraphModel dx="3013" dy="1840" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -2360,6 +2360,9 @@
         <mxCell id="pxQwDc25vfQwQAExYE67-79" value="озброєння та військова техніки" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4675" y="650" width="112" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-222" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-81" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-81" value="паспорт озброєння" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4839" y="705" width="160" height="60" as="geometry" />
         </mxCell>
@@ -2369,8 +2372,14 @@
         <mxCell id="pxQwDc25vfQwQAExYE67-82" value="id складника зброї" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4647.5" y="770" width="150" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-226" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-83" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-83" value="ціна зброї (за одиницю)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4510" y="550" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-225" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-85" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-85" value="номер державний" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4474.5" y="660" width="153" height="65" as="geometry" />
@@ -2378,8 +2387,14 @@
         <mxCell id="pxQwDc25vfQwQAExYE67-86" value="номер корпусу" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4823" y="780" width="142" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-221" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-87" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-87" value="номер заводський" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4807.5" y="580" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-224" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-88" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-88" value="id виробника" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4470" y="760" width="140" height="55" as="geometry" />
@@ -2721,6 +2736,9 @@
         </mxCell>
         <mxCell id="pxQwDc25vfQwQAExYE67-216" value="id військової техніки" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="4940" y="340" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pxQwDc25vfQwQAExYE67-223" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.839;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="pxQwDc25vfQwQAExYE67-86" target="pxQwDc25vfQwQAExYE67-79">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
