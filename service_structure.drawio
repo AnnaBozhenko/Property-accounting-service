@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T20:40:19.735Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="pSGPUirg_1BmmK_dtSco" version="22.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-13T22:54:26.496Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="V65487ieg1g5vU4LU02b" version="22.1.8" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="2112" dy="2684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4280" dy="3330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3504,82 +3504,82 @@
         <mxCell id="PBkBtRbDzw7XPEaLhylC-41" value="облік зап частин,&lt;br&gt;інструментів" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="4765.5" y="5961.5" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-3">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-5">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-1" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник аптеки &lt;br&gt;медичного пункту &lt;br&gt;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-1" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник аптеки &lt;br&gt;медичного пункту &lt;br&gt;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="6230" y="6608" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-10" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-3" target="4jpvVw1EzmAn8IBbF3ix-6">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-10" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-3" target="4jpvVw1EzmAn8IBbF3ix-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-3" value="отримує мед &lt;br&gt;майно" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-3" value="отримує мед &lt;br&gt;майно" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="6010" y="6718.25" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-4" value="розподіляє мед майно" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-4" value="розподіляє мед майно" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="6210" y="6780" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-5" value="вее облік" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-5" value="вее облік" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="6390" y="6698" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-6" value="облік отруйних/наркотичних &lt;br&gt;речовин" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-6" value="облік отруйних/наркотичних &lt;br&gt;речовин" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="6010" y="6850" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.41;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-4">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.41;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-1" target="4jpvVw1EzmAn8IBbF3ix-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-12" target="4jpvVw1EzmAn8IBbF3ix-13">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-12" target="4jpvVw1EzmAn8IBbF3ix-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-12" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник їдальні&lt;br&gt;&amp;nbsp;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-12" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник їдальні&lt;br&gt;&amp;nbsp;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="5493" y="6648" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-13" value="вести облік майна їдальні" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-13" value="вести облік майна їдальні" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5447.5" y="6828" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-14" value="&lt;b&gt;Майно їдальні:&lt;br&gt;&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;заощаджені продукти&lt;/span&gt;&lt;/div&gt;харчування&lt;br&gt;обладнання, &lt;br&gt;столово-кухонний посуд, інвентар" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-14" value="&lt;b&gt;Майно їдальні:&lt;br&gt;&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;заощаджені продукти&lt;/span&gt;&lt;/div&gt;харчування&lt;br&gt;обладнання, &lt;br&gt;столово-кухонний посуд, інвентар" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="5207.52" y="6629.25" width="194" height="122" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-18">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-20">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-21">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-22">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-16" target="4jpvVw1EzmAn8IBbF3ix-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-16" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник майстерні по &lt;br&gt;ремонту речового майна&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-16" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник майстерні по &lt;br&gt;ремонту речового майна&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="5755" y="6648" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-18" value="облік інструментів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-18" value="облік інструментів" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5670" y="6840" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-20" value="облік інвентарю" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-20" value="облік інвентарю" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5570" y="6920" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-21" value="облік отриманого&lt;br&gt;речового майна" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-21" value="облік отриманого&lt;br&gt;речового майна" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5770" y="6950" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-22" value="облік ремонтних матеріалів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-22" value="облік ремонтних матеріалів" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5855" y="6828" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-26" target="4jpvVw1EzmAn8IBbF3ix-27">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-26" target="4jpvVw1EzmAn8IBbF3ix-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-26" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник складу&lt;br&gt;&amp;nbsp;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-26" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник складу&lt;br&gt;&amp;nbsp;частини&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="5464" y="7130" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-37" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-27" target="4jpvVw1EzmAn8IBbF3ix-33">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-37" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-27" target="4jpvVw1EzmAn8IBbF3ix-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-38" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-27" target="4jpvVw1EzmAn8IBbF3ix-34">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-38" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-27" target="4jpvVw1EzmAn8IBbF3ix-34" edge="1">
           <mxGeometry x="0.3033" y="14" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="5390" y="7510" />
@@ -3588,67 +3588,67 @@
             <mxPoint x="10" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-27" value="знати номенклатуру МЗ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-27" value="знати номенклатуру МЗ" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5329.5" y="7300" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-28" value="&lt;b&gt;Скорочення:&lt;br&gt;&lt;/b&gt;МЗ - матеріальний засіб" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-28" value="&lt;b&gt;Скорочення:&lt;br&gt;&lt;/b&gt;МЗ - матеріальний засіб" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="5170" y="7220" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-39" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-30">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-39" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-30" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-41" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-32">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-41" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-29" value="вести облік МЗ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-29" value="вести облік МЗ" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5523" y="7290" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-30" value="кількісний" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-30" value="кількісний" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5449.5" y="7410" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-31" value="якісний" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-31" value="якісний" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5660" y="7400" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-32" value="прибутково-видатковий" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-32" value="прибутково-видатковий" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5567.5" y="7500" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-33" value="знати норми та правила упакування та зберігання МЗ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-33" value="знати норми та правила упакування та зберігання МЗ" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5259.5" y="7420" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-34" value="знати технологію (роз)консервацію МЗ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-34" value="знати технологію (роз)консервацію МЗ" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="5290" y="7540" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.305;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-26" target="4jpvVw1EzmAn8IBbF3ix-29">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.305;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-26" target="4jpvVw1EzmAn8IBbF3ix-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-40" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.241;entryY=0.024;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-31">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-40" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.241;entryY=0.024;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-29" target="4jpvVw1EzmAn8IBbF3ix-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-42" target="4jpvVw1EzmAn8IBbF3ix-43">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-42" target="4jpvVw1EzmAn8IBbF3ix-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-42" target="4jpvVw1EzmAn8IBbF3ix-45">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-42" target="4jpvVw1EzmAn8IBbF3ix-45" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-42" value="начальник &lt;br&gt;заправного &lt;br&gt;пункту" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-42" value="начальник &lt;br&gt;заправного &lt;br&gt;пункту" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="3725" y="6031.5" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-49" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-43" target="4jpvVw1EzmAn8IBbF3ix-47">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-49" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-43" target="4jpvVw1EzmAn8IBbF3ix-47" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-43" value="облік МЗ заправного пункту" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-43" value="облік МЗ заправного пункту" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3625" y="6195" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-45" value="знати номентклатуру пально-мастильних матеріалів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-45" value="знати номентклатуру пально-мастильних матеріалів" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3765" y="6198" width="135" height="92" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-47" value="облік якісний" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-47" value="облік якісний" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3563.75" y="6318" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-48" value="облік наявності" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-48" value="облік наявності" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3729.5" y="6338" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4jpvVw1EzmAn8IBbF3ix-50" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.208;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4jpvVw1EzmAn8IBbF3ix-43" target="4jpvVw1EzmAn8IBbF3ix-48">
+        <mxCell id="4jpvVw1EzmAn8IBbF3ix-50" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.208;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-43" target="4jpvVw1EzmAn8IBbF3ix-48" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
