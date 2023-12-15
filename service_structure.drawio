@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-13T22:54:26.496Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="V65487ieg1g5vU4LU02b" version="22.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-15T13:24:38.010Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="CgXaSPBKRB-0-nnzO2bt" version="22.1.9" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="4280" dy="3330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="6000" dy="4083" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3649,6 +3649,27 @@
           <mxGeometry x="3729.5" y="6338" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4jpvVw1EzmAn8IBbF3ix-50" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.208;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4jpvVw1EzmAn8IBbF3ix-43" target="4jpvVw1EzmAn8IBbF3ix-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PH4eI7MNKzb0GuVKoqRg-1" target="PH4eI7MNKzb0GuVKoqRg-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PH4eI7MNKzb0GuVKoqRg-1" target="PH4eI7MNKzb0GuVKoqRg-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-1" value="&lt;br&gt;&lt;span style=&quot;color: rgb(41, 58, 85); font-family: &amp;quot;IBM Plex Serif&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Начальник служби &lt;br&gt;радіаційного, &lt;br&gt;хімічного, &lt;br&gt;біологічного захисту &lt;br&gt;(РХБ захисту)&lt;/span&gt;&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="5045" y="6798" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-2" value="облік РХБ засобів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4830" y="7070" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-3" value="розподіл РХБ засобів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5020" y="7070" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-4" value="отриманння РХБ засобів" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5220" y="7030" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PH4eI7MNKzb0GuVKoqRg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.733;entryY=0.069;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PH4eI7MNKzb0GuVKoqRg-1" target="PH4eI7MNKzb0GuVKoqRg-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
