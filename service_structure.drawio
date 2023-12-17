@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-17T11:02:09.760Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5lLePwLskX_K0y9cI_k3" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-17T11:32:07.362Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5WVRyzNYa9dbsBCUQeyX" version="22.1.11" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="3583" dy="4123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3133" dy="2828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3733,7 +3733,7 @@
           <mxGeometry x="197.37" y="1785" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-1" value="&lt;h1&gt;Функціональні вимоги&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-973.88" y="2368" width="439" height="120" as="geometry" />
+          <mxGeometry x="-1180" y="2445.5" width="439" height="120" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;РАО&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1138.88" y="2580.5" width="60" height="30" as="geometry" />
