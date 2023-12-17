@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-17T10:35:54.678Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="FUcOY3KF4RZ5g68p-LkP" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-17T11:02:09.760Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="5lLePwLskX_K0y9cI_k3" version="22.1.11" type="github">
   <diagram name="Page-1" id="J9UU2hMNTnWzp-OVLoyW">
-    <mxGraphModel dx="4045" dy="3227" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3583" dy="4123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3748,36 +3748,56 @@
           <mxGeometry x="-1055.2600000000002" y="2671" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-7" value="визначити залишкову вартість" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1061.2" y="2835.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1133.88" y="2824.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-8" value="інвентаризувати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1061.2" y="2923" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1133.88" y="2908" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-9" value="зняти з обліку втрачену зброю&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1061.2000000000003" y="3014.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1133.8800000000003" y="2990" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-10" value="списати майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1061.2000000000003" y="3110" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1138.8800000000003" y="3100" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-11" value="ремонт" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1058.2600000000002" y="3312.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="-759.6200000000001" y="3108.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-12" target="4j_YHCCLpwBXAd7zZUhR-11">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-12" value="здати в ремонт майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-913.14" y="3327" width="120" height="60" as="geometry" />
+          <mxGeometry x="-593.88" y="3122.25" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-13" value="отримати відремонтоване майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-913.14" y="3409.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="-593.88" y="3204.75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.847;entryY=0.992;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-14" target="4j_YHCCLpwBXAd7zZUhR-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1037" y="3180" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-14" value="списати використане майно зі стрільбищ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-913.14" y="3127.5" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-15" target="4j_YHCCLpwBXAd7zZUhR-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-15" value="списати використане майно з бойових завдань" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-913.1399999999999" y="3210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-16" target="4j_YHCCLpwBXAd7zZUhR-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-908" y="2716" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-16" value="видати майно на стрільби" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-908.38" y="2693.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4j_YHCCLpwBXAd7zZUhR-17" value="вилати майно на бойові завдання" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-17" value="видати майно на бойові завдання" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-908.38" y="2768.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-18" value="отримати майно від складу &quot;Арсенал&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -3786,11 +3806,17 @@
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-19" value="отримати майно від військового" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-607.38" y="2689" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-20" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-20" value="отримати майно від волонтерів" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-607.38" y="2769" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-21" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;отримати майно як трофей&lt;/span&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-604.38" y="2853" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-22" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-22" value="отримати майно від підрозділу цієї частини" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-604.38" y="2926" width="120" height="60" as="geometry" />
@@ -3799,7 +3825,7 @@
           <mxGeometry x="-604.38" y="3003" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-346.88" y="2548" width="893.88" height="960" as="geometry" />
+          <mxGeometry x="-346.88" y="2548" width="893.88" height="952" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-28" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;АС&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-298.7600000000001" y="2581" width="60" height="30" as="geometry" />
@@ -3820,19 +3846,19 @@
           <mxGeometry x="-216.88000000000028" y="3141.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-36" value="ремонт" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-218.1400000000002" y="3313" width="120" height="60" as="geometry" />
+          <mxGeometry x="123.55999999999977" y="3107.75" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-37" target="4j_YHCCLpwBXAd7zZUhR-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-37" value="здати в ремонт майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-73.01999999999998" y="3327.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="268.68" y="3122.25" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-38" target="4j_YHCCLpwBXAd7zZUhR-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-38" value="отримати відремонтоване майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-73.01999999999998" y="3410" width="120" height="60" as="geometry" />
+          <mxGeometry x="268.68" y="3204.75" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-39" target="4j_YHCCLpwBXAd7zZUhR-35">
           <mxGeometry relative="1" as="geometry" />
@@ -3933,6 +3959,149 @@
         </mxCell>
         <mxCell id="4j_YHCCLpwBXAd7zZUhR-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.86;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-56" target="4j_YHCCLpwBXAd7zZUhR-34">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-81" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="2548" width="973.26" height="952" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-82" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;ПММ&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="649.9999999999999" y="2585.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-83" value="подати запит" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="2652" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-84" value="подати завку" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="2659" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-85" value="подати розрахунок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="2735.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-86" value="отримати майно" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1127.13" y="2649" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-87" target="4j_YHCCLpwBXAd7zZUhR-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-87" target="4j_YHCCLpwBXAd7zZUhR-86">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="2730" />
+              <mxPoint x="1250" y="2730" />
+              <mxPoint x="1250" y="2729" />
+              <mxPoint x="1217" y="2729" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-87" value="отримати від ОЦЗ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="2671" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-88" target="4j_YHCCLpwBXAd7zZUhR-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-88" value="отримати від бригади" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="2752" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-89" target="4j_YHCCLpwBXAd7zZUhR-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-89" value="отримати від іншої ВЧ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="2829" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-90" value="оприбуткувати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1423.12" y="2671" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-91" value="оприбуткувати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1423.12" y="2750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-92" value="оприбуткувати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1423.12" y="2829.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-96" value="видати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="693" y="2807" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-97" value="видати майно військовому" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-908" y="2848" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-98" target="4j_YHCCLpwBXAd7zZUhR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-98" value="видати майно підрозділу" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-907" y="2927" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-99" value="видати майно іншому складу" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-906.88" y="3005" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.932;entryY=1.069;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-17" target="4j_YHCCLpwBXAd7zZUhR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.849;entryY=1.056;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-97" target="4j_YHCCLpwBXAd7zZUhR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.652;entryY=1.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-99" target="4j_YHCCLpwBXAd7zZUhR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.697;entryY=0.998;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-13" target="4j_YHCCLpwBXAd7zZUhR-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.908;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-18" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-646" y="2662" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.844;entryY=0.977;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-19" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.632;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-21" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.366;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-23" target="4j_YHCCLpwBXAd7zZUhR-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-117" value="видати підрозділу цієї ВЧ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="857" y="2836" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-118" value="видати іншій ВЧ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="857" y="2927" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-120" value="списати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="3024.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-121" value="списати майно по Донесенням" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="3060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-122" value="списати майно по Актам освіження" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="3141.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-123" value="списати майно для &lt;b&gt;тех огляду&lt;/b&gt; по Актам списання" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="3220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-124" value="списати &lt;b&gt;мастило для зброї&lt;/b&gt; по Актам списання" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="3300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-125" value="звірка&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1129.12" y="2991.75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-126" target="4j_YHCCLpwBXAd7zZUhR-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-126" value="інвентаризувати" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1303.12" y="2991.75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-127" target="4j_YHCCLpwBXAd7zZUhR-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-127" value="звірити облік з бригадою" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1303.12" y="3071.75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-128" value="звірити облік з підрозділом" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1303.12" y="3156.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.624;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4j_YHCCLpwBXAd7zZUhR-128" target="4j_YHCCLpwBXAd7zZUhR-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4j_YHCCLpwBXAd7zZUhR-133" value="щоденний &lt;br&gt;звіт діловода" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1108" y="3258" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
