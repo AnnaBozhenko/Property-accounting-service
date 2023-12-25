@@ -34,7 +34,8 @@ CREATE TABLE IF NOT EXISTS messages (
     recipient_id INT REFERENCES users(id),
     subject VARCHAR(255) NOT NULL,
     body TEXT NOT NULL,
-    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    type VARCHAR(255) NOT NULL
 );
 '''
 cursor.execute(create_messages_table_query)

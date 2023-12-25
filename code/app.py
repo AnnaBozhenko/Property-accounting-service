@@ -39,6 +39,7 @@ class Message(db.Model):
     subject = db.Column(db.String(255), nullable=False)
     body = db.Column(db.Text, nullable=False)
     sent_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
+    type = db.Column(db.String(255), nullable=True)
     # Define relationships
     sender = relationship('User', foreign_keys=[sender_id], backref='sent_messages')
     recipient = relationship('User', foreign_keys=[recipient_id], backref='received_messages')
@@ -152,8 +153,9 @@ def compose():
         if recipient_id:
             subject = request.form['subject']
             body = request.form['body']
+            email_type = request.form['email_type']  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body)
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
             db.session.add(new_message)
             db.session.commit()
 

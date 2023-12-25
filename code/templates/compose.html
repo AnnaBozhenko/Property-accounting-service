@@ -39,6 +39,15 @@
         <h2>Написати</h2>
         <form method="POST">
             <div>
+                <label for="email_type">Type of Email:</label>
+                <select name="email_type" id="email_type">
+                    <option value="Рапорт">Рапорт</option>
+                    <option value="Наказ">Наказ</option>
+                    <option value="Наряд">Наряд</option>
+                    <option value="Звернення">Звернення</option>
+                </select>
+            </div>
+            <div>
                 <label for="department_number">Department Number:</label>
                 <input type="text" id="department_number" name="department_number" required>
             </div>
