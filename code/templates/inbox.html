@@ -7,7 +7,8 @@
     <div id="email-list">
         {% for message in received_messages %}
             <div class="email-item" data-message-id="{{ message.id }}">
-                <strong>Зміст: {{ message.subject }}</strong>
+                <strong>Тип: {{ message.type }}</strong>
+                <p>Зміст: {{ message.subject }}</p>
                 <p>Текст: {{ message.body }}</p>
             </div>
         {% endfor %}
