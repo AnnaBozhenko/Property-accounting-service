@@ -17,14 +17,6 @@
         <p>Full Name: {{ user[2] }}</p>
         <p>Title: {{ user[3] }}</p>
         <p>Department Number: {{ user[4] }}</p>
-        <a href="{{ url_for('logout') }}">Logout</a>
-
-        <ul>
-            <li><a href="{{ url_for('inbox') }}">Inbox</a></li>
-            <li><a href="{{ url_for('sent') }}">Sent</a></li>
-            <li><a href="{{ url_for('compose') }}">Compose</a></li>
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
-        </ul>
     </body>
     </html>
 {% endblock %}
