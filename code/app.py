@@ -5,7 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload, relationship
 from sqlalchemy import ForeignKey
 
-
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
@@ -19,6 +18,7 @@ DB_PASSWORD = 'postgres'
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
 db = SQLAlchemy(app)
 
+
 # Define the User model
 class User(db.Model):
     __tablename__ = 'users'
@@ -29,6 +29,7 @@ class User(db.Model):
     department_number = db.Column(db.Integer, nullable=False)
     email = db.Column(db.String(255), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
+
 
 # Define the Message model
 class Message(db.Model):
@@ -45,6 +46,19 @@ class Message(db.Model):
     recipient = relationship('User', foreign_keys=[recipient_id], backref='received_messages')
 
 
+# Define the Record model
+class EntryRecord(db.Model):
+    __tablename__ = 'entry_records'
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date, nullable=False)
+    time = db.Column(db.Time, nullable=False)
+    purpose = db.Column(db.String(255), nullable=False)
+    rank = db.Column(db.String(255), nullable=False)
+    first_name = db.Column(db.String(255), nullable=False)
+    last_name = db.Column(db.String(255), nullable=False)
+    patronymic = db.Column(db.String(255), nullable=False)
+
+
 @app.route('/')
 def home():
     user = session.get('user')
@@ -53,6 +67,8 @@ def home():
         return redirect(url_for('profile'))
     else:
         return redirect(url_for('login'))
+
+
 # Signup route
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -73,6 +89,7 @@ def signup():
 
     return render_template('signup.html')
 
+
 # Login route
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -92,6 +109,7 @@ def login():
 
     return render_template('login.html')
 
+
 # Profile route
 @app.route('/profile')
 def profile():
@@ -101,15 +119,18 @@ def profile():
         received_messages = Message.query.filter_by(recipient_id=user[0]).all()
         sent_messages = Message.query.filter_by(sender_id=user[0]).all()
 
-        return render_template('profile.html', user=user, received_messages=received_messages, sent_messages=sent_messages)
+        return render_template('profile.html', user=user, received_messages=received_messages,
+                               sent_messages=sent_messages)
     else:
         return redirect(url_for('login'))
+
 
 # Logout route
 @app.route('/logout')
 def logout():
     session.pop('user', None)
     return redirect(url_for('login'))
+
 
 # Inbox route
 @app.route('/inbox')
@@ -123,6 +144,7 @@ def inbox():
     else:
         return redirect(url_for('login'))
 
+
 # Sent route
 @app.route('/sent')
 def sent():
@@ -134,6 +156,7 @@ def sent():
         return render_template('sent.html', user=user, sent_messages=sent_messages)
     else:
         return redirect(url_for('login'))
+
 
 # Compose route
 @app.route('/compose', methods=['GET', 'POST'])
@@ -155,7 +178,8 @@ def compose():
             body = request.form['body']
             email_type = request.form['email_type']  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body,
+                                  type=email_type)
             db.session.add(new_message)
             db.session.commit()
 
@@ -166,19 +190,22 @@ def compose():
 
     return render_template('compose.html', user=user)
 
+
 # Autocomplete recipient route
 @app.route('/autocomplete_recipient', methods=['GET'])
 def autocomplete_recipient():
     search_term = request.args.get('term')
     department_number = request.args.get('department_number')
-    
+
     # Exclude the current user from the suggestions
     matching_users = User.query \
-        .filter(User.department_number == department_number, User.full_name.ilike(f'%{search_term}%'), User.id != session['user'][0]) \
+        .filter(User.department_number == department_number, User.full_name.ilike(f'%{search_term}%'),
+                User.id != session['user'][0]) \
         .all()
-    
+
     names = [user.full_name for user in matching_users]
     return jsonify(names)
+
 
 @app.route('/get_email_detail/<int:message_id>')
 def get_email_detail(message_id):
@@ -222,6 +249,48 @@ def department_process():
 
     if user:
         return render_template('department_process.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+
+@app.route('/record_book_entry')
+def record_book_entry():
+    user = session.get('user')
+
+    if user:
+        # Fetch all records from the entry_records table
+        all_records = EntryRecord.query.all()
+
+        return render_template('record_book_entry.html', user=user, records=all_records)
+    else:
+        return redirect(url_for('login'))
+
+
+@app.route('/add_record', methods=['GET', 'POST'])
+def add_record():
+    user = session.get('user')
+
+    if user:
+        if request.method == 'POST':
+            # Retrieve data from the form
+            date = request.form.get('date')
+            time = request.form.get('time')
+            purpose = request.form.get('purpose')
+            rank = request.form.get('rank')
+            first_name = request.form.get('first_name')
+            last_name = request.form.get('last_name')
+            patronymic = request.form.get('patronymic')
+
+            new_entry = EntryRecord(date=date, time=time,
+                            purpose=purpose, rank=rank, first_name=first_name, last_name=last_name, patronymic=patronymic)
+            # new_record = Record(date='2023-01-01', time='12:00:00', purpose='Test', rank='Captain', first_name='John', last_name='Doe', patronymic='Smith')
+            db.session.add(new_entry)
+            db.session.commit()
+
+            # Redirect the user back to the record book entry page
+            return redirect(url_for('record_book_entry'))
+
+        return render_template('add_record.html', user=user)
     else:
         return redirect(url_for('login'))
 

@@ -1,0 +1,78 @@
+<!-- record_book_entry.html -->
+{% extends 'base.html' %}
+
+{% block title %}Запис у книгу відвідувань{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .record-header {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .record-info {
+            margin-bottom: 20px;
+        }
+
+        .record-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .record-table th, .record-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .record-button {
+            background-color: #888;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <h2 class="record-header">Запис у книгу відвідувань</h2>
+
+    <div class="record-info">
+        <p>Служба: РАО</p>
+        <p>Код складу: ххххх</p>
+    </div>
+
+    <table class="record-table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Час</th>
+                <th>Мета</th>
+                <th>Звання</th>
+                <th>Ім'я</th>
+                <th>Прізвище</th>
+                <th>По-батькові</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record.date }}</td>
+                    <td>{{ record.time }}</td>
+                    <td>{{ record.purpose }}</td>
+                    <td>{{ record.rank }}</td>
+                    <td>{{ record.first_name }}</td>
+                    <td>{{ record.last_name }}</td>
+                    <td>{{ record.patronymic }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <a href="{{ url_for('add_record') }}" class="record-button">Увести запис</a>
+{% endblock %}

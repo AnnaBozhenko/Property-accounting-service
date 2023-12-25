@@ -39,7 +39,7 @@
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="record_book" onchange="crossOutText('record_book')">
-            <label for="record_book" class="checkbox-label"><a href="#">Записати у книгу відвідувань</a></label>
+            <label for="record_book" class="checkbox-label"><a href="{{ url_for('record_book_entry') }}">Записати у книгу відвідувань</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_numbered" onchange="crossOutText('create_record_numbered')">

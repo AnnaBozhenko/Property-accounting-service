@@ -40,3 +40,21 @@ CREATE TABLE IF NOT EXISTS messages (
 '''
 cursor.execute(create_messages_table_query)
 conn.commit()
+
+# Function to create the records table if not exists
+create_entry_records_table_query = '''
+CREATE TABLE IF NOT EXISTS entry_records (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    purpose VARCHAR(255) NOT NULL,
+    rank VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    patronymic VARCHAR(255) NOT NULL
+);
+'''
+
+# Execute the query and commit the changes
+cursor.execute(create_entry_records_table_query)
+conn.commit()
