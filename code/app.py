@@ -4,6 +4,9 @@ from flask.json import jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload, relationship
 from sqlalchemy import ForeignKey
+from flask_wtf import FlaskForm
+from wtforms import StringField, DateField, IntegerField, SelectField
+from wtforms.validators import DataRequired
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -38,7 +41,7 @@ class Message(db.Model):
     sender_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     recipient_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     subject = db.Column(db.String(255), nullable=False)
-    body = db.Column(db.Text, nullable=False)
+    body = db.Column(db.Text, nullable=True)
     sent_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
     type = db.Column(db.String(255), nullable=True)
     # Define relationships
@@ -58,6 +61,47 @@ class EntryRecord(db.Model):
     last_name = db.Column(db.String(255), nullable=False)
     patronymic = db.Column(db.String(255), nullable=False)
 
+
+class DeliveryNotes(db.Model):
+    __tablename__ = 'delivery_notes'
+    id = db.Column(db.Integer, primary_key=True)
+    date_valid_until = db.Column(db.String(20))
+    invoice_number = db.Column(db.String(50))
+    military_unit_number = db.Column(db.String(50))
+    registration_number = db.Column(db.String(50))
+    document_number = db.Column(db.String(50))
+    document_date = db.Column(db.String(20))
+    operation_purpose = db.Column(db.String(255))
+    operation_date = db.Column(db.String(20))
+    support_service = db.Column(db.String(255))
+    military_property_name = db.Column(db.String(255))
+    nomenclature_code = db.Column(db.String(50))
+    unit_of_measure = db.Column(db.String(50))
+    category = db.Column(db.String(50))
+    operation_type = db.Column(db.String(50))
+    issued_received = db.Column(db.String(50))
+    note = db.Column(db.Text)
+    submitted = db.Column(db.Boolean, default=False)
+
+
+# Define the WriteDeliveryForm
+class WriteDeliveryForm(FlaskForm):
+    date_valid_until = DateField('Дата дійсна до', validators=[DataRequired()])
+    invoice_number = StringField('Номер накладної', validators=[DataRequired()])
+    military_unit_number = StringField('Номер військової частини', validators=[DataRequired()])
+    registration_number = StringField('Номер реєстрації', validators=[DataRequired()])
+    document_number = StringField('Номер документа', validators=[DataRequired()])
+    document_date = DateField('Дата документа', validators=[DataRequired()])
+    operation_purpose = StringField('Мета операції', validators=[DataRequired()])
+    operation_date = DateField('Дата операції', validators=[DataRequired()])
+    support_service = StringField('Служба забезпечення', validators=[DataRequired()])
+    military_property_name = StringField('Назва військового майна', validators=[DataRequired()])
+    nomenclature_code = StringField('Код номенклатури', validators=[DataRequired()])
+    unit_of_measure = StringField('Одиниця виміру', validators=[DataRequired()])
+    category = StringField('Категорія(сорт)', validators=[DataRequired()])
+    operation_type = StringField('Видати (прийняти)', validators=[DataRequired()])
+    issued_received = StringField('Відпущено(прийняти)', validators=[DataRequired()])
+    note = StringField('Примітка')
 
 @app.route('/')
 def home():
@@ -162,7 +206,40 @@ def sent():
 @app.route('/compose', methods=['GET', 'POST'])
 def compose():
     user = session.get('user')
+    if user:
+        render_template('write.html', user=user)
+    else:
+        return redirect(url_for('login'))
 
+    """if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            body = request.form['body']
+            email_type = request.form['email_type']  # Get the selected email type
+
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            db.session.add(new_message)
+            db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')"""
+
+    return render_template('write.html', user=user)
+
+@app.route('/write_address', methods=['GET', 'POST'])
+def write_address():
+    user = session.get('user')
     if request.method == 'POST':
         department_number = request.form['department_number']  # Corrected line
         recipient_name = request.form['recipient_name']
@@ -187,8 +264,93 @@ def compose():
         else:
             # User not found, display an error message
             flash('Wrong recipient.', 'error')
+    return render_template('write_address.html', user=user)
 
-    return render_template('compose.html', user=user)
+
+@app.route('/write_order', methods=['GET', 'POST'])
+def write_order():
+    user = session.get('user')
+    if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            body = request.form['body']
+            email_type = request.form['email_type']  # Get the selected email type
+
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            db.session.add(new_message)
+            db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
+    return render_template('write_order.html', user=user)
+
+@app.route('/write_report', methods=['GET', 'POST'])
+def write_report():
+    user = session.get('user')
+    if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            body = request.form['body']
+            email_type = "Наказ"  # Get the selected email type
+
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            db.session.add(new_message)
+            db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
+    return render_template('write_report.html', user=user)
+
+
+@app.route('/write_follow_letter', methods=['GET', 'POST'])
+def write_follow_letter():
+    user = session.get('user')
+    if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            body = request.form['body']
+            email_type = request.form['email_type']  # Get the selected email type
+
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            db.session.add(new_message)
+            db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
+    return render_template('write_follow_letter.html', user=user)
 
 
 # Autocomplete recipient route
@@ -240,7 +402,24 @@ def issue():
         return render_template('issue.html', user=user)
     else:
         return redirect(url_for('login'))
+    
+@app.route('/get_smth')
+def get_smth():
+    user = session.get('user')
 
+    if user:
+        return render_template('get_smth.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+@app.route('/get_flow')
+def get_flow():
+    user = session.get('user')
+
+    if user:
+        return render_template('get_flow.html', user=user)
+    else:
+        return redirect(url_for('login'))
 
 # Add this route to handle the "Підрозділу" section
 @app.route('/department_process')
@@ -251,6 +430,80 @@ def department_process():
         return render_template('department_process.html', user=user)
     else:
         return redirect(url_for('login'))
+
+@app.route('/write_delivery', methods=['GET', 'POST'])
+def write_delivery():
+    form = WriteDeliveryForm()
+    user = session.get('user')
+
+    if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            email_type = "Накладна"  # Get the selected email type
+
+            if form.validate_on_submit():
+                delivery_note = DeliveryNotes(
+                    date_valid_until=form.date_valid_until.data,
+                    invoice_number=form.invoice_number.data,
+                    military_unit_number=form.military_unit_number.data,
+                    registration_number=form.registration_number.data,
+                    document_number=form.document_number.data,
+                    document_date=form.document_date.data,
+                    operation_purpose=form.operation_purpose.data,
+                    operation_date=form.operation_date.data,
+                    support_service=form.support_service.data,
+                    military_property_name=form.military_property_name.data,
+                    nomenclature_code=form.nomenclature_code.data,
+                    unit_of_measure=form.unit_of_measure.data,
+                    category=form.category.data,
+                    operation_type=form.operation_type.data,
+                    issued_received=form.issued_received.data,
+                    note=form.note.data
+                )
+
+                db.session.add(delivery_note)
+                db.session.commit()
+
+                new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, type=email_type)
+                db.session.add(new_message)
+                db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
+    return render_template('write_delivery.html', form=form, user=user)
+
+
+# Route to display the form for editing a delivery note
+@app.route('/edit_delivery/<int:delivery_id>', methods=['GET', 'POST'])
+def edit_delivery(delivery_id):
+    delivery_note = DeliveryNotes.query.get(delivery_id)
+    form = WriteDeliveryForm(obj=delivery_note)
+
+    if form.validate_on_submit():
+        form.populate_obj(delivery_note)
+        db.session.commit()
+
+        flash('Delivery note updated successfully!', 'success')
+        return redirect(url_for('edit_delivery', delivery_id=delivery_id))
+
+    return render_template('edit_delivery.html', form=form, delivery_note=delivery_note)
+
+
+# Custom filter to format dates in templates
+@app.template_filter('format_date')
+def format_date(value, format='%d %B %Y'):
+    return value.strftime(format)
 
 
 @app.route('/record_book_entry')

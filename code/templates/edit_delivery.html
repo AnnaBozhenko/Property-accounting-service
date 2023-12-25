@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Delivery{% endblock %}
+
+{% block content %}
+    <h2>Edit Delivery</h2>
+    <form method="POST" action="{{ url_for('edit_delivery', delivery_id=delivery_note.id) }}">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.date_valid_until.label(class="form-label") }}
+            {{ form.date_valid_until(class="form-control", value=delivery_note.date_valid_until) }}
+            {% if form.date_valid_until.errors %}
+                <small class="text-danger">{{ form.date_valid_until.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.invoice_number.label(class="form-label") }}
+            {{ form.invoice_number(class="form-control", value=delivery_note.invoice_number) }}
+            {% if form.invoice_number.errors %}
+                <small class="text-danger">{{ form.invoice_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.military_unit_number.label(class="form-label") }}
+            {{ form.military_unit_number(class="form-control", value=delivery_note.military_unit_number) }}
+            {% if form.military_unit_number.errors %}
+                <small class="text-danger">{{ form.military_unit_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.registration_number.label(class="form-label") }}
+            {{ form.registration_number(class="form-control", value=delivery_note.registration_number) }}
+            {% if form.registration_number.errors %}
+                <small class="text-danger">{{ form.registration_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+
+        <div class="form-group">
+            {{ form.document_number.label(class="form-label") }}
+            {{ form.document_number(class="form-control", value=delivery_note.document_number) }}
+            {% if form.document_number.errors %}
+                <small class="text-danger">{{ form.document_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.document_date.label(class="form-label") }}
+            {{ form.document_date(class="form-control", value=delivery_note.document_date) }}
+            {% if form.document_date.errors %}
+                <small class="text-danger">{{ form.document_date.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_purpose.label(class="form-label") }}
+            {{ form.operation_purpose(class="form-control", value=delivery_note.operation_purpose) }}
+            {% if form.operation_purpose.errors %}
+                <small class="text-danger">{{ form.operation_purpose.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_date.label(class="form-label") }}
+            {{ form.operation_date(class="form-control", value=delivery_note.operation_date) }}
+            {% if form.operation_date.errors %}
+                <small class="text-danger">{{ form.operation_date.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+
+        <div class="form-group">
+            {{ form.support_service.label(class="form-label") }}
+            {{ form.support_service(class="form-control", value=delivery_note.support_service) }}
+            {% if form.support_service.errors %}
+                <small class="text-danger">{{ form.support_service.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.military_property_name.label(class="form-label") }}
+            {{ form.military_property_name(class="form-control", value=delivery_note.military_property_name) }}
+            {% if form.military_property_name.errors %}
+                <small class="text-danger">{{ form.military_property_name.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.nomenclature_code.label(class="form-label") }}
+            {{ form.nomenclature_code(class="form-control", value=delivery_note.nomenclature_code) }}
+            {% if form.nomenclature_code.errors %}
+                <small class="text-danger">{{ form.nomenclature_code.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.unit_of_measure.label(class="form-label") }}
+            {{ form.unit_of_measure(class="form-control", value=delivery_note.unit_of_measure) }}
+            {% if form.unit_of_measure.errors %}
+                <small class="text-danger">{{ form.unit_of_measure.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+
+
+        <div class="form-group">
+            {{ form.category.label(class="form-label") }}
+            {{ form.category(class="form-control", value=delivery_note.category) }}
+            {% if form.category.errors %}
+                <small class="text-danger">{{ form.category.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_type.label(class="form-label") }}
+            {{ form.operation_type(class="form-control", value=delivery_note.operation_type) }}
+            {% if form.operation_type.errors %}
+                <small class="text-danger">{{ form.operation_type.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.issued_received.label(class="form-label") }}
+            {{ form.issued_received(class="form-control", value=delivery_note.issued_received) }}
+            {% if form.issued_received.errors %}
+                <small class="text-danger">{{ form.issued_received.errors[0] }}</small>
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            {{ form.note.label(class="form-label") }}
+            {{ form.note(class="form-control", value=delivery_note.note) }}
+            {% if form.note.errors %}
+                <small class="text-danger">{{ form.note.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <!-- Repeat the above block for other form fields -->
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </form>
+{% endblock %}

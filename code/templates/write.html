@@ -1,4 +1,3 @@
-<!-- create.html -->
 {% extends 'base.html' %}
 
 {% block title %}Create{% endblock %}
@@ -40,17 +39,14 @@
     <h2>Робоче місце</h2>
     <div class="button-container">
         <div class="button-row">
-            <button class="gray-button"><a href="{{ url_for('issue') }}">Видати</a></button>
-            <button class="gray-button"><a href="{{ url_for('get_smth') }}">Прийняти</a></button>
-            <button class="gray-button">Інвентарізувати</button>
+            <button class="gray-button"><a href="{{ url_for('write_report') }}">Рапорт</a></button>
+            <button class="gray-button"><a href="{{ url_for('write_order') }}">Наказ</a></button>
+            <button class="gray-button"><a href="{{ url_for('write_address') }}">Звернення</a></button>
         </div>
         <div class="button-row">
-            <button class="gray-button">Списати</button>
-            <button class="gray-button">Зняти з обліку</button>
-            <button class="gray-button">Визначити залишкову вартість</button>
-        </div>
-        <div class="button-row">
-            <button class="gray-button">Ремонт</button>
+            
+            <button class="gray-button"><a href="{{ url_for('write_delivery') }}">Накладна</a></button>
+            <button class="gray-button"><a href="{{ url_for('write_follow_letter') }}">Супровідний лист</a></button>
         </div>
     </div>
 {% endblock %}
