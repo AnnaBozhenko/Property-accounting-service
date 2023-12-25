@@ -1,0 +1,7 @@
+<!-- email_detail.html -->
+<h2>Лист</h2>
+<h3>Відправник: {{ sender.full_name }} ({{ sender.department_number }})</h3>
+<h3>Отримувач: {{ recipient.full_name }} ({{ recipient.department_number }})</h3>
+<strong>Зміст:<br> {{ message.subject }}</strong>
+<p>Текст:<br> {{ message.body }}</p>
+<p>Час відправки: {{ message.sent_at }}</p>

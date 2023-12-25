@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Your App{% endblock %}</title>
+    <title>{% block title %}Матеріальна служба{% endblock %}</title>
     <style>
         body {
             margin: 0;
@@ -41,6 +41,15 @@
             flex: 1;
             padding: 20px;
         }
+        
+        #email-list {
+            width: 50%;
+        }
+
+        #email-detail {
+            flex: 1;
+            overflow: auto;
+        }
     </style>
     <!-- Add your CSS stylesheets and other common head elements here -->
 </head>
@@ -49,19 +58,22 @@
     <!-- Left bar panel with links -->
     <div id="left-panel">
         <ul>
-            <li><a href="{{ url_for('profile') }}">Profile</a></li>
-            <li><a href="{{ url_for('inbox') }}">Inbox</a></li>
-            <li><a href="{{ url_for('sent') }}">Sent</a></li>
-            <li><a href="{{ url_for('compose') }}">Compose</a></li>
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('profile') }}">Профіль</a></li>
+            <li><a href="{{ url_for('inbox') }}">Вхідні</a></li>
+            <li><a href="{{ url_for('sent') }}">Надіслані</a></li>
+            <li><a href="{{ url_for('compose') }}">Написати</a></li>
+            <li><a href="{{ url_for('logout') }}">Вийти</a></li>
             <!-- Add other links as needed -->
         </ul>
     </div>
 
-    <!-- Content section -->
     <div id="content">
         {% block content %}{% endblock %}
     </div>
 
+    <!-- Email detail section -->
+    <div id="email-detail">
+        {% block email_detail %}{% endblock %}
+    </div>
 </body>
 </html>

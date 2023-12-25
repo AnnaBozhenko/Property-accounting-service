@@ -18,7 +18,8 @@
                         $.ajax({
                             url: "/autocomplete_recipient",
                             data: {
-                                term: request.term
+                                term: request.term,
+                                department_number: $("#department_number").val()  // Include the department_number in the request
                             },
                             success: function(data) {
                                 response(data);
@@ -35,23 +36,34 @@
         </script>
     </head>
     <body>
-        <h2>Compose</h2>
+        <h2>Написати</h2>
         <form method="POST">
-            <label for="department_number">Department Number:</label>
-            <input type="text" id="department_number" name="department_number" required>
+            <div>
+                <label for="department_number">Department Number:</label>
+                <input type="text" id="department_number" name="department_number" required>
+            </div>
 
-            <label for="recipient_name">Recipient:</label>
-            <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
-            <input type="hidden" id="recipient_id" name="recipient_id">
+            <div>
+                <label for="recipient_name">Recipient:</label>
+                <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
+                <input type="hidden" id="recipient_id" name="recipient_id">
+            </div>
 
-            <label>Subject:</label>
-            <input type="text" name="subject" required><br>
+            <div>
+                <label>Subject:</label>
+                <input type="text" name="subject" required>
+            </div>
 
-            <label>Body:</label>
-            <textarea name="body" required></textarea><br>
+            <div>
+                <label>Body:</label>
+                <textarea name="body" required></textarea>
+            </div>
 
-            <input type="submit" value="Send">
+            <div>
+                <input type="submit" value="Send">
+            </div>
         </form>
     </body>
     </html>
+
 {% endblock %}

@@ -2,6 +2,9 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask.json import jsonify
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import joinedload, relationship
+from sqlalchemy import ForeignKey
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -36,6 +39,9 @@ class Message(db.Model):
     subject = db.Column(db.String(255), nullable=False)
     body = db.Column(db.Text, nullable=False)
     sent_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
+    # Define relationships
+    sender = relationship('User', foreign_keys=[sender_id], backref='sent_messages')
+    recipient = relationship('User', foreign_keys=[recipient_id], backref='received_messages')
 
 
 @app.route('/')
@@ -128,7 +134,6 @@ def sent():
         return redirect(url_for('login'))
 
 # Compose route
-# Compose route
 @app.route('/compose', methods=['GET', 'POST'])
 def compose():
     user = session.get('user')
@@ -152,6 +157,9 @@ def compose():
             db.session.commit()
 
             return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
 
     return render_template('compose.html', user=user)
 
@@ -159,9 +167,28 @@ def compose():
 @app.route('/autocomplete_recipient', methods=['GET'])
 def autocomplete_recipient():
     search_term = request.args.get('term')
-    matching_users = User.query.filter(User.full_name.ilike(f'%{search_term}%')).all()
+    department_number = request.args.get('department_number')
+    
+    # Exclude the current user from the suggestions
+    matching_users = User.query \
+        .filter(User.department_number == department_number, User.full_name.ilike(f'%{search_term}%'), User.id != session['user'][0]) \
+        .all()
+    
     names = [user.full_name for user in matching_users]
     return jsonify(names)
+
+@app.route('/get_email_detail/<int:message_id>')
+def get_email_detail(message_id):
+    # Fetch the email details based on the message_id
+    message = Message.query.get(message_id)
+    sender = User.query.get(message.sender_id)
+
+    # Fetch recipient details
+    recipient = User.query.get(message.recipient_id)
+
+    # Render a template with the email details
+    return render_template('email_detail.html', message=message, sender=sender, recipient=recipient)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

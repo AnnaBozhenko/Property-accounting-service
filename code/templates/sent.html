@@ -3,17 +3,43 @@
 
 {% block title %}Sent{% endblock %}
 {% block content %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <!-- Head content -->
-    </head>
-    <body>
-        <h2>Sent</h2>
+    <h2>Надіслані</h2>
+    <div id="email-list">
         {% for message in sent_messages %}
-            <p>{{ message.recipient_id }} - {{ message.subject }} - {{ message.sent_at }}</p>
-            <p>{{ message.body }}</p>
+            <div class="email-item" data-message-id="{{ message.id }}">
+                <strong>Зміст: {{ message.subject }}</strong>
+                <p>Текст: {{ message.body }}</p>
+            </div>
         {% endfor %}
-    </body>
-    </html>
+    </div>
+
+{% endblock %}
+
+
+{% block email_detail %}
+    <div id="email-detail">
+        <!-- This div will be populated with email details when an email is clicked -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '.email-item', function() {
+                var messageId = $(this).data('message-id');
+
+                // Make an AJAX request to get email details based on the message_id
+                $.ajax({
+                    url: '/get_email_detail/' + messageId,
+                    method: 'GET',
+                    success: function(data) {
+                        // Populate the email-detail div with the fetched email details
+                        $('#email-detail').html(data);
+                    },
+                    error: function() {
+                        console.error('Error fetching email detail.');
+                    }
+                });
+            });
+        });
+    </script>
 {% endblock %}
