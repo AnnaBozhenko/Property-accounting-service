@@ -87,6 +87,7 @@ def login():
         else:
             # User not found, display an error message
             flash('Incorrect email or password. Please try again.', 'error')
+            return redirect(url_for('login'))
 
     return render_template('login.html')
 

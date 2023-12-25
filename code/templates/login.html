@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вхід</title>
 </head>
+<script>
+    $(function() {
+        // setTimeout() function will be fired after page is loaded
+        // it will wait for 5 sec. and then will fire
+        // $(".message_flash").hide() function
+        setTimeout(function() {
+            $(".message_flash").hide('blind', {}, 500)
+        }, 5000);
+    })   
+</script>
 <body>
     <h2>Вхід</h2>
     <form method="POST">
@@ -21,5 +31,15 @@
 
     <!-- Link to signup page -->
     <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <div class="message_flash">{{ message }}</div>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
 </body>
 </html>
