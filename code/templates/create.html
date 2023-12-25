@@ -1,0 +1,56 @@
+<!-- create.html -->
+{% extends 'base.html' %}
+
+{% block title %}Create{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: 10px 0;
+        }
+
+        .gray-button {
+            background-color: #888;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: calc(33.33% - 10px); /* 10px margin between buttons */
+            cursor: pointer; /* Add cursor pointer for better indication of clickability */
+        }
+
+        .gray-button:hover {
+            background-color: #555; /* Change color on hover for better feedback */
+        }
+    </style>
+
+    <h2>Робоче місце</h2>
+    <div class="button-container">
+        <div class="button-row">
+            <button class="gray-button"><a href="{{ url_for('issue') }}">Видати</a></button>
+            <button class="gray-button">Прийняти</button>
+            <button class="gray-button">Інвентарізувати</button>
+        </div>
+        <div class="button-row">
+            <button class="gray-button">Списати</button>
+            <button class="gray-button">Зняти з обліку</button>
+            <button class="gray-button">Визначити залишкову вартість</button>
+        </div>
+        <div class="button-row">
+            <button class="gray-button">Ремонт</button>
+        </div>
+    </div>
+{% endblock %}

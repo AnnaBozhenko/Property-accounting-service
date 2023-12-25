@@ -1,0 +1,43 @@
+<!-- issue.html -->
+{% extends 'base.html' %}
+
+{% block title %}Видати{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .gray-block {
+            background-color: #888;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center; /* Center the text within the gray block */
+        }
+
+        .options-list {
+            list-style-type: disc;
+            padding-left: 40px; /* Increase the padding for better alignment */
+        }
+
+        .options-list-item {
+            margin-bottom: 10px;
+            color: white; /* Set the text color to white */
+            text-align: left; /* Align text to the left */
+        }
+
+        .options-list-item a {
+            color: white; /* Set the link text color to white */
+            text-decoration: none;
+        }
+    </style>
+
+    <div class="gray-block">
+        <h2>Видати</h2>
+        <ul class="options-list">
+            <li class="options-list-item"><a href="#">Підрозділу</a></li>
+            <li class="options-list-item"><a href="#">Військовослужбовцю</a></li>
+            <li class="options-list-item"><a href="#">На інший склад</a></li>
+            <li class="options-list-item"><a href="#">На стрільби</a></li>
+            <li class="options-list-item"><a href="#">На бойові завдання</a></li>
+        </ul>
+    </div>
+{% endblock %}

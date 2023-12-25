@@ -190,5 +190,27 @@ def get_email_detail(message_id):
     return render_template('email_detail.html', message=message, sender=sender, recipient=recipient)
 
 
+# Add this route to your Flask app
+@app.route('/create')
+def create():
+    user = session.get('user')
+
+    if user:
+        return render_template('create.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+
+# Add this route to your Flask app
+@app.route('/issue')
+def issue():
+    user = session.get('user')
+
+    if user:
+        return render_template('issue.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
