@@ -1,0 +1,37 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h2>Signup</h2>
+    <form method="POST">
+        <label>Military ID:</label>
+        <input type="text" name="military_id" required><br>
+
+        <label>Full Name:</label>
+        <input type="text" name="full_name" required><br>
+
+        <label>Title:</label>
+        <input type="text" name="title" required><br>
+
+        <label>Department Number:</label>
+        <input type="number" name="department_number" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br>
+
+        <input type="submit" value="Signup">
+    </form>
+
+    <!-- Link to login page -->
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- compose.html -->
+{% extends 'base.html' %}
+
+{% block title %}Compose{% endblock %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script>
+            $(function() {
+                // Use jQuery UI Autocomplete for the recipient input
+                $("#recipient_name").autocomplete({
+                    source: function(request, response) {
+                        // Send an AJAX request to the server for autocomplete suggestions
+                        $.ajax({
+                            url: "/autocomplete_recipient",
+                            data: {
+                                term: request.term
+                            },
+                            success: function(data) {
+                                response(data);
+                            }
+                        });
+                    },
+                    minLength: 2,  // Minimum characters to trigger autocomplete
+                    select: function(event, ui) {
+                        // Set the recipient ID when a name is selected
+                        $("#recipient_id").val(ui.item.id);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Compose</h2>
+        <form method="POST">
+            <label for="department_number">Department Number:</label>
+            <input type="text" id="department_number" name="department_number" required>
+
+            <label for="recipient_name">Recipient:</label>
+            <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
+            <input type="hidden" id="recipient_id" name="recipient_id">
+
+            <label>Subject:</label>
+            <input type="text" name="subject" required><br>
+
+            <label>Body:</label>
+            <textarea name="body" required></textarea><br>
+
+            <input type="submit" value="Send">
+        </form>
+    </body>
+    </html>
+{% endblock %}

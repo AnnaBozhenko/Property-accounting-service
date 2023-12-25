@@ -1,0 +1,19 @@
+<!-- sent.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sent{% endblock %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Head content -->
+    </head>
+    <body>
+        <h2>Sent</h2>
+        {% for message in sent_messages %}
+            <p>{{ message.recipient_id }} - {{ message.subject }} - {{ message.sent_at }}</p>
+            <p>{{ message.body }}</p>
+        {% endfor %}
+    </body>
+    </html>
+{% endblock %}

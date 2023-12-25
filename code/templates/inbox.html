@@ -1,0 +1,19 @@
+<!-- inbox.html -->
+{% extends 'base.html' %}
+
+{% block title %}Inbox{% endblock %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Head content -->
+    </head>
+    <body>
+        <h2>Inbox</h2>
+        {% for message in received_messages %}
+            <p>{{ message.sender_id }} - {{ message.subject }} - {{ message.sent_at }}</p>
+            <p>{{ message.body }}</p>
+        {% endfor %}
+    </body>
+    </html>
+{% endblock %}
