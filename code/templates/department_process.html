@@ -1,0 +1,76 @@
+<!-- department_process.html -->
+{% extends 'base.html' %}
+
+{% block title %}Цикл процесу{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .checkbox-list {
+            padding-left: 20px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #333; /* Set the text color to black or a suitable color */
+        }
+
+        .checkbox-label {
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .checkbox-label a {
+            color: #333; /* Set the link text color to black or a suitable color */
+            text-decoration: none;
+        }
+
+        .checkbox-label a.crossed {
+            text-decoration: line-through; /* Apply line-through text decoration when the 'crossed' class is present */
+        }
+    </style>
+
+    <h2>Цикл процесу</h2>
+    <ul class="checkbox-list">
+        <li class="checkbox-item">
+            <input type="checkbox" id="receive_invoice" onchange="crossOutText('receive_invoice')">
+            <label for="receive_invoice" class="checkbox-label"><a href="#">Отримати від начальника накладну</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="record_book" onchange="crossOutText('record_book')">
+            <label for="record_book" class="checkbox-label"><a href="#">Записати у книгу відвідувань</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="create_record_numbered" onchange="crossOutText('create_record_numbered')">
+            <label for="create_record_numbered" class="checkbox-label"><a href="#">Створити запис (книга обліку за номерами)</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="create_record_categorical" onchange="crossOutText('create_record_categorical')">
+            <label for="create_record_categorical" class="checkbox-label"><a href="#">Створити запис (категорійний)</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="create_record_invoice" onchange="crossOutText('create_record_invoice')">
+            <label for="create_record_invoice" class="checkbox-label"><a href="#">Створити запис (в накладній)</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="create_report" onchange="crossOutText('create_report')">
+            <label for="create_report" class="checkbox-label"><a href="#">Створити рапорт (начальнику служби)</a></label>
+        </li>
+        <li class="checkbox-item">
+            <input type="checkbox" id="send_report" onchange="crossOutText('send_report')">
+            <label for="send_report" class="checkbox-label"><a href="#">Надіслати рапорт</a></label>
+        </li>
+    </ul>
+
+    <script>
+        function crossOutText(checkboxId) {
+            var label = document.querySelector('[for=' + checkboxId + ']');
+            var link = label.querySelector('a');
+
+            if (link) {
+                link.classList.toggle('crossed');
+            }
+        }
+    </script>
+{% endblock %}
