@@ -3,7 +3,7 @@
 {% block title %}Edit Delivery{% endblock %}
 
 {% block content %}
-    <h2>Edit Delivery</h2>
+    <h2>Відредагувати накладну</h2>
     <form method="POST" action="{{ url_for('edit_delivery', delivery_id=delivery_note.id) }}">
         {{ form.hidden_tag() }}
 
@@ -142,7 +142,58 @@
         <!-- Repeat the above block for other form fields -->
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="submit" class="btn btn-primary">Зберегти</button>
         </div>
     </form>
+    <form id="signatureForm">
+        <h2>Підписати</h2>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" id="recipientSignature">Підписати отримувач</button>
+            <span id="recipientCheckmark" class="{{ 'green-checkmark' if delivery_note.submitted else '' }}"></span>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" id="receiverSignature">Підписати одержувач</button>
+            <span id="receiverCheckmark" class="{{ 'green-checkmark' if delivery_note.submitted else '' }}"></span>
+        </div>
+    </form>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </div>
+
+    <div class="form-group">
+        <a href="{{ url_for('get_flow') }}" class="btn btn-primary">Повернутись до сторінки цикл процесу</a>
+    </div>
+
+    <script>
+        // Assume 'submitted' is a boolean variable indicating whether the invoice is submitted
+        var submitted = {{ 'true' if delivery_note.submitted else 'false' }};
+
+        // Update the checkmarks based on the initial 'submitted' status
+        updateCheckmarks();
+
+        // Handle button clicks
+        $('#recipientSignature').click(function () {
+            submitted = !submitted;  // Toggle the submitted status
+            updateCheckmarks();
+        });
+
+        $('#receiverSignature').click(function () {
+            submitted = !submitted;  // Toggle the submitted status
+            updateCheckmarks();
+        });
+
+        // Function to update checkmarks based on the 'submitted' status
+        function updateCheckmarks() {
+            if (submitted) {
+                $('#recipientCheckmark').addClass('green-checkmark');
+                $('#receiverCheckmark').addClass('green-checkmark');
+            } else {
+                $('#recipientCheckmark').removeClass('green-checkmark');
+                $('#receiverCheckmark').removeClass('green-checkmark');
+            }
+        }
+    </script>
+
+    
 {% endblock %}

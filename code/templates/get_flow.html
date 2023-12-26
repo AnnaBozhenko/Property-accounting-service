@@ -39,7 +39,7 @@
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="record_book" onchange="crossOutText('receive_invoice')">
-            <label for="record_book" class="checkbox-label"><a href="#">Отримати накладну</a></label>
+            <label for="record_book" class="checkbox-label"><a href="{{ url_for('record_delivery_notes') }}">Отримати накладну</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_numbered" onchange="crossOutText('receive_follow_letter')">

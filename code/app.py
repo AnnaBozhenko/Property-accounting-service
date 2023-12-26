@@ -44,10 +44,11 @@ class Message(db.Model):
     body = db.Column(db.Text, nullable=True)
     sent_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
     type = db.Column(db.String(255), nullable=True)
+    invoice_number = db.Column(db.Integer, db.ForeignKey('delivery_notes.id'), nullable=True)
     # Define relationships
     sender = relationship('User', foreign_keys=[sender_id], backref='sent_messages')
     recipient = relationship('User', foreign_keys=[recipient_id], backref='received_messages')
-
+    invoice = relationship('DeliveryNotes', foreign_keys=[invoice_number], backref='invoices')
 
 # Define the Record model
 class EntryRecord(db.Model):
@@ -473,7 +474,7 @@ def write_delivery():
                 db.session.add(delivery_note)
                 db.session.commit()
 
-                new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, type=email_type)
+                new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, type=email_type, invoice_number=delivery_note.id)
                 db.session.add(new_message)
                 db.session.commit()
 
@@ -484,7 +485,6 @@ def write_delivery():
     return render_template('write_delivery.html', form=form, user=user)
 
 
-# Route to display the form for editing a delivery note
 @app.route('/edit_delivery/<int:delivery_id>', methods=['GET', 'POST'])
 def edit_delivery(delivery_id):
     delivery_note = DeliveryNotes.query.get(delivery_id)
@@ -499,11 +499,42 @@ def edit_delivery(delivery_id):
 
     return render_template('edit_delivery.html', form=form, delivery_note=delivery_note)
 
+@app.route('/submit_signature', methods=['POST'])
+def submit_signature():
+    delivery_id = request.form.get('delivery_id')
+    delivery_note = DeliveryNotes.query.get(delivery_id)
+
+    # Toggle the 'submitted' status
+    delivery_note.submitted = not delivery_note.submitted
+    db.session.commit()
+
+    flash('Signature submitted successfully!', 'success')
+    return redirect(url_for('edit_delivery', delivery_id=delivery_id))
+
 
 # Custom filter to format dates in templates
 @app.template_filter('format_date')
 def format_date(value, format='%d %B %Y'):
     return value.strftime(format)
+
+@app.route('/record_delivery_notes')
+def record_delivery_notes():
+    user = session.get('user')
+
+    if user:
+        # Fetch all records from the entry_records table
+        all_records = (
+            DeliveryNotes.query
+            .join(Message, DeliveryNotes.id == Message.invoice_number)  # Join with the 'messages' table
+            .join(User, User.id == Message.sender_id)  # Join with the 'users' table for sender's full_name\
+            .filter(Message.recipient_id == user[0])
+            .add_columns(User.full_name, DeliveryNotes.id, DeliveryNotes.date_valid_until, DeliveryNotes.invoice_number, DeliveryNotes.military_unit_number, DeliveryNotes.military_property_name)
+            .all()
+        )
+
+        return render_template('record_delivery_notes.html', user=user, records=all_records)
+    else:
+        return redirect(url_for('login'))
 
 
 @app.route('/record_book_entry')
