@@ -1,0 +1,101 @@
+<!-- record_numbered.html -->
+{% extends 'base.html' %}
+
+{% block title %}Запис у книзі обліку за номерами{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .form-block {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            margin-bottom: 10px;
+        }
+
+        .form-row label {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .form-row input {
+            width: 300px;
+        }
+
+        .separator {
+            border-top: 1px solid black;
+            margin: 20px 0;
+        }
+
+        .submit-button {
+            background-color: #888;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <h2>Запис у книзі обліку за номерами</h2>
+
+    <div class="form-block">
+        <div class="form-row">
+            <label for="sample">Зразок</label>
+            <input type="text" id="sample" name="sample">
+        </div>
+        <div class="form-row">
+            <label for="state_number">Номер (державний)</label>
+            <input type="text" id="state_number" name="state_number">
+        </div>
+        <div class="form-row">
+            <label for="factory_number">Номер заводський</label>
+            <input type="text" id="factory_number" name="factory_number">
+        </div>
+        <div class="form-row">
+            <label for="form_number">Номер формуляра (паспорта)</label>
+            <input type="text" id="form_number" name="form_number">
+        </div>
+        <div class="form-row">
+            <label for="manufacture_year">Рік виготовлення</label>
+            <input type="text" id="manufacture_year" name="manufacture_year">
+        </div>
+        <div class="form-row">
+            <label for="unit_price">Ціна за одиницю</label>
+            <input type="text" id="unit_price" name="unit_price">
+        </div>
+        <div class="form-row">
+            <label for="receipt_date">Дата надходження</label>
+            <input type="text" id="receipt_date" name="receipt_date">
+        </div>
+        <div class="form-row">
+            <label for="document_number">Номер документу</label>
+            <input type="text" id="document_number" name="document_number">
+        </div>
+        <div class="form-row">
+            <label for="document_date">Дата документа</label>
+            <input type="text" id="document_date" name="document_date">
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="form-block">
+        <div class="form-row">
+            <label for="nomenclature">Номенклатура</label>
+            <input type="text" id="nomenclature" name="nomenclature">
+        </div>
+        <div class="form-row">
+            <label for="location">Місцезнаходження</label>
+            <input type="text" id="location" name="location">
+        </div>
+        <div class="form-row">
+            <label for="order_number">Номер закріплення наказу</label>
+            <input type="text" id="order_number" name="order_number">
+        </div>
+    </div>
+
+    <a href="#" class="submit-button">Увести</a>
+{% endblock %}

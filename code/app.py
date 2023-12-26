@@ -104,6 +104,7 @@ class WriteDeliveryForm(FlaskForm):
     issued_received = StringField('Відпущено(прийняти)', validators=[DataRequired()])
     note = StringField('Примітка')
 
+
 @app.route('/')
 def home():
     user = session.get('user')
@@ -238,6 +239,7 @@ def compose():
 
     return render_template('write.html', user=user)
 
+
 @app.route('/write_address', methods=['GET', 'POST'])
 def write_address():
     user = session.get('user')
@@ -286,7 +288,8 @@ def write_order():
             body = request.form['body']
             email_type = request.form['email_type']  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body,
+                                  type=email_type)
             db.session.add(new_message)
             db.session.commit()
 
@@ -295,6 +298,7 @@ def write_order():
             # User not found, display an error message
             flash('Wrong recipient.', 'error')
     return render_template('write_order.html', user=user)
+
 
 @app.route('/write_report', methods=['GET', 'POST'])
 def write_report():
@@ -314,7 +318,8 @@ def write_report():
             body = request.form['body']
             email_type = "Наказ"  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body,
+                                  type=email_type)
             db.session.add(new_message)
             db.session.commit()
 
@@ -343,7 +348,8 @@ def write_follow_letter():
             body = request.form['body']
             email_type = request.form['email_type']  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
+            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body,
+                                  type=email_type)
             db.session.add(new_message)
             db.session.commit()
 
@@ -403,7 +409,8 @@ def issue():
         return render_template('issue.html', user=user)
     else:
         return redirect(url_for('login'))
-    
+
+
 @app.route('/get_smth')
 def get_smth():
     user = session.get('user')
@@ -412,6 +419,7 @@ def get_smth():
         return render_template('get_smth.html', user=user)
     else:
         return redirect(url_for('login'))
+
 
 @app.route('/get_flow')
 def get_flow():
@@ -422,6 +430,7 @@ def get_flow():
     else:
         return redirect(url_for('login'))
 
+
 # Add this route to handle the "Підрозділу" section
 @app.route('/department_process')
 def department_process():
@@ -431,6 +440,7 @@ def department_process():
         return render_template('department_process.html', user=user)
     else:
         return redirect(url_for('login'))
+
 
 @app.route('/write_delivery', methods=['GET', 'POST'])
 def write_delivery():
@@ -566,7 +576,8 @@ def add_record():
             patronymic = request.form.get('patronymic')
 
             new_entry = EntryRecord(date=date, time=time,
-                            purpose=purpose, rank=rank, first_name=first_name, last_name=last_name, patronymic=patronymic)
+                                    purpose=purpose, rank=rank, first_name=first_name, last_name=last_name,
+                                    patronymic=patronymic)
             # new_record = Record(date='2023-01-01', time='12:00:00', purpose='Test', rank='Captain', first_name='John', last_name='Doe', patronymic='Smith')
             db.session.add(new_entry)
             db.session.commit()
@@ -575,6 +586,16 @@ def add_record():
             return redirect(url_for('record_book_entry'))
 
         return render_template('add_record.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+
+@app.route('/record_numbered')
+def record_numbered():
+    user = session.get('user')
+
+    if user:
+        return render_template('record_numbered.html', user=user)
     else:
         return redirect(url_for('login'))
 
