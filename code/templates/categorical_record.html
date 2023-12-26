@@ -1,0 +1,110 @@
+<!-- categorical_record.html -->
+{% extends 'base.html' %}
+
+{% block title %}Категорійна книга обліку{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .form-block {
+            margin-bottom: 20px;
+        }
+
+        .form-header {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-row {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-row label {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .form-row input {
+            width: 300px;
+        }
+
+        .separator {
+            border-top: 1px solid black;
+            margin: 20px 0;
+        }
+    </style>
+
+    <h2>Категорійна книга обліку</h2>
+
+    <div class="form-block">
+        <div class="form-header">Місце зберігання</div>
+        <div class="form-row">
+            <label for="storage_number">Номер сховища</label>
+            <input type="text" id="storage_number" name="storage_number">
+        </div>
+        <div class="form-row">
+            <label for="shelf_number">Номер стелажу</label>
+            <input type="text" id="shelf_number" name="shelf_number">
+        </div>
+        <div class="form-row">
+            <label for="shelf_row_number">Номер полиці</label>
+            <input type="text" id="shelf_row_number" name="shelf_row_number">
+        </div>
+        <div class="form-row">
+            <label for="container_number">Номер контейнеру</label>
+            <input type="text" id="container_number" name="container_number">
+        </div>
+        <div class="form-row">
+            <label for="precious_metals_content">Вміст дороцінних металів</label>
+            <input type="text" id="precious_metals_content" name="precious_metals_content">
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="form-block">
+        <div class="form-header">Первинна інформація</div>
+        <div class="form-row">
+            <label for="registration_number">Реєстраційний номер</label>
+            <input type="text" id="registration_number" name="registration_number">
+            <label for="supply_service">Служба забезпечення</label>
+            <input type="text" id="supply_service" name="supply_service">
+        </div>
+        <div class="form-row">
+            <label for="property_name">Назва військового майна</label>
+            <input type="text" id="property_name" name="property_name">
+            <label for="warehouse">Склад</label>
+            <input type="text" id="warehouse" name="warehouse">
+        </div>
+        <div class="form-row">
+            <label for="nomenclature_code">Код номенклатури</label>
+            <input type="text" id="nomenclature_code" name="nomenclature_code">
+            <label for="military_unit">Військова частина (з'єднання)</label>
+            <input type="text" id="military_unit" name="military_unit">
+        </div>
+        <div class="form-row">
+            <label for="unit_of_measure">Одиниця виміру</label>
+            <input type="text" id="unit_of_measure" name="unit_of_measure">
+            <label for="min_stock">min запас (норма)</label>
+            <input type="text" id="min_stock" name="min_stock">
+        </div>
+        <div class="form-row">
+            <label for="batch_number">Номер партії</label>
+            <input type="text" id="batch_number" name="batch_number">
+            <label for="max_stock">max запас (норма)</label>
+            <input type="text" id="max_stock" name="max_stock">
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="form-block">
+        <div class="form-row">
+            <label for="record_date">Дата запису</label>
+            <input type="text" id="record_date" name="record_date">
+            <label for="responsible_person">Відповідальна особа</label>
+            <input type="text" id="responsible_person" name="responsible_person">
+        </div>
+    </div>
+{% endblock %}

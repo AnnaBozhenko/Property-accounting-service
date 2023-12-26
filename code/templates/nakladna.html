@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+
+{% block title %}Накладна{% endblock %}
+
+{% block content %}
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script>
+            $(function() {
+                // Use jQuery UI Autocomplete for the recipient input
+                $("#recipient_name").autocomplete({
+                    source: function(request, response) {
+                        // Send an AJAX request to the server for autocomplete suggestions
+                        $.ajax({
+                            url: "/autocomplete_recipient",
+                            data: {
+                                term: request.term,
+                                department_number: $("#department_number").val()  // Include the department_number in the request
+                            },
+                            success: function(data) {
+                                response(data);
+                            }
+                        });
+                    },
+                    minLength: 2,  // Minimum characters to trigger autocomplete
+                    select: function(event, ui) {
+                        // Set the recipient ID when a name is selected
+                        $("#recipient_id").val(ui.item.id);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <h2>Накладнa</h2>
+    <form method="POST" action="{{ url_for('nakladna') }}">
+        {{ form.hidden_tag() }}
+
+        <div>
+            <label for="department_number">Department Number:</label>
+            <input type="text" id="department_number" name="department_number" required>
+        </div>
+
+        <div>
+            <label for="recipient_name">Recipient:</label>
+            <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
+            <input type="hidden" id="recipient_id" name="recipient_id">
+        </div>
+
+        <div>
+            <label>Subject:</label>
+            <input type="text" name="subject" required>
+        </div>
+
+        <div class="form-group">
+            {{ form.date_valid_until.label(class="form-label") }}
+            {{ form.date_valid_until(class="form-control") }}
+            {% if form.date_valid_until.errors %}
+                <small class="text-danger">{{ form.date_valid_until.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.invoice_number.label(class="form-label") }}
+            {{ form.invoice_number(class="form-control") }}
+            {% if form.invoice_number.errors %}
+                <small class="text-danger">{{ form.invoice_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.military_unit_number.label(class="form-label") }}
+            {{ form.military_unit_number(class="form-control") }}
+            {% if form.military_unit_number.errors %}
+                <small class="text-danger">{{ form.military_unit_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.registration_number.label(class="form-label") }}
+            {{ form.registration_number(class="form-control") }}
+            {% if form.registration_number.errors %}
+                <small class="text-danger">{{ form.registration_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.document_number.label(class="form-label") }}
+            {{ form.document_number(class="form-control") }}
+            {% if form.document_number.errors %}
+                <small class="text-danger">{{ form.document_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.document_date.label(class="form-label") }}
+            {{ form.document_date(class="form-control") }}
+            {% if form.document_date.errors %}
+                <small class="text-danger">{{ form.document_date.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_purpose.label(class="form-label") }}
+            {{ form.operation_purpose(class="form-control") }}
+            {% if form.operation_purpose.errors %}
+                <small class="text-danger">{{ form.operation_purpose.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_date.label(class="form-label") }}
+            {{ form.operation_date(class="form-control") }}
+            {% if form.operation_date.errors %}
+                <small class="text-danger">{{ form.operation_date.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.support_service.label(class="form-label") }}
+            {{ form.support_service(class="form-control") }}
+            {% if form.support_service.errors %}
+                <small class="text-danger">{{ form.support_service.errors[0] }}</small>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.military_property_name.label(class="form-label") }}
+            {{ form.military_property_name(class="form-control") }}
+            {% if form.military_property_name.errors %}
+                <small class="text-danger">{{ form.military_property_name.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.nomenclature_code.label(class="form-label") }}
+            {{ form.nomenclature_code(class="form-control") }}
+            {% if form.nomenclature_code.errors %}
+                <small class="text-danger">{{ form.nomenclature_code.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.unit_of_measure.label(class="form-label") }}
+            {{ form.unit_of_measure(class="form-control") }}
+            {% if form.unit_of_measure.errors %}
+                <small class="text-danger">{{ form.unit_of_measure.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.category.label(class="form-label") }}
+            {{ form.category(class="form-control") }}
+            {% if form.category.errors %}
+                <small class="text-danger">{{ form.category.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.operation_type.label(class="form-label") }}
+            {{ form.operation_type(class="form-control") }}
+            {% if form.operation_type.errors %}
+                <small class="text-danger">{{ form.operation_type.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.issued_received.label(class="form-label") }}
+            {{ form.issued_received(class="form-control") }}
+            {% if form.issued_received.errors %}
+                <small class="text-danger">{{ form.issued_received.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.note.label(class="form-label") }}
+            {{ form.note(class="form-control") }}
+            {% if form.note.errors %}
+                <small class="text-danger">{{ form.note.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Підписати та надіслати форму</button>
+        </div>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <div class="message_flash">{{ message }}</div>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+{% endblock %}

@@ -600,5 +600,68 @@ def record_numbered():
         return redirect(url_for('login'))
 
 
+@app.route('/nakladna', methods=['GET', 'POST'])
+def nakladna():
+    form = WriteDeliveryForm()
+    user = session.get('user')
+
+    if request.method == 'POST':
+        department_number = request.form['department_number']  # Corrected line
+        recipient_name = request.form['recipient_name']
+
+        # Query only the id of the user based on department number and recipient name
+        recipient_id = User.query \
+            .filter(User.department_number == department_number, User.full_name == recipient_name) \
+            .with_entities(User.id) \
+            .scalar()
+
+        if recipient_id:
+            subject = request.form['subject']
+            email_type = "Накладна"  # Get the selected email type
+
+            if form.validate_on_submit():
+                delivery_note = DeliveryNotes(
+                    date_valid_until=form.date_valid_until.data,
+                    invoice_number=form.invoice_number.data,
+                    military_unit_number=form.military_unit_number.data,
+                    registration_number=form.registration_number.data,
+                    document_number=form.document_number.data,
+                    document_date=form.document_date.data,
+                    operation_purpose=form.operation_purpose.data,
+                    operation_date=form.operation_date.data,
+                    support_service=form.support_service.data,
+                    military_property_name=form.military_property_name.data,
+                    nomenclature_code=form.nomenclature_code.data,
+                    unit_of_measure=form.unit_of_measure.data,
+                    category=form.category.data,
+                    operation_type=form.operation_type.data,
+                    issued_received=form.issued_received.data,
+                    note=form.note.data
+                )
+
+                db.session.add(delivery_note)
+                db.session.commit()
+
+                new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, type=email_type, invoice_number=delivery_note.id)
+                db.session.add(new_message)
+                db.session.commit()
+
+            return redirect(url_for('sent'))
+        else:
+            # User not found, display an error message
+            flash('Wrong recipient.', 'error')
+    return render_template('nakladna.html', form=form, user=user)
+
+
+@app.route('/categorical_record')
+def categorical_record():
+    user = session.get('user')
+
+    if user:
+        return render_template('categorical_record.html', user=user)
+    else:
+        return redirect(url_for('login'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)

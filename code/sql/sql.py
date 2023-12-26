@@ -26,6 +26,32 @@ CREATE TABLE IF NOT EXISTS users (
 cursor.execute(create_table_query)
 conn.commit()
 
+create_delivery_notes_table_query = '''
+CREATE TABLE delivery_notes (
+    id SERIAL PRIMARY KEY,
+    date_valid_until DATE,
+    invoice_number VARCHAR(255),
+    military_unit_number VARCHAR(255),
+    registration_number VARCHAR(255),
+    document_number VARCHAR(255),
+    document_date DATE,
+    operation_purpose VARCHAR(255),
+    operation_date DATE,
+    support_service VARCHAR(255),
+    military_property_name VARCHAR(255),
+    nomenclature_code VARCHAR(255),
+    unit_of_measure VARCHAR(255),
+    category VARCHAR(255),
+    operation_type VARCHAR(255),
+    issued_received VARCHAR(255),
+    released_received VARCHAR(255),
+    note TEXT,
+    submitted BOOLEAN DEFAULT FALSE
+);
+'''
+cursor.execute(create_delivery_notes_table_query)
+conn.commit()
+
 # Add this table creation query to the existing create_users_table function
 create_messages_table_query = '''
 CREATE TABLE IF NOT EXISTS messages (
@@ -59,28 +85,4 @@ CREATE TABLE IF NOT EXISTS entry_records (
 # Execute the query and commit the changes
 cursor.execute(create_entry_records_table_query)
 conn.commit()
-create_delivery_notes_table_query = '''
-CREATE TABLE delivery_notes (
-    id SERIAL PRIMARY KEY,
-    date_valid_until DATE,
-    invoice_number VARCHAR(255),
-    military_unit_number VARCHAR(255),
-    registration_number VARCHAR(255),
-    document_number VARCHAR(255),
-    document_date DATE,
-    operation_purpose VARCHAR(255),
-    operation_date DATE,
-    support_service VARCHAR(255),
-    military_property_name VARCHAR(255),
-    nomenclature_code VARCHAR(255),
-    unit_of_measure VARCHAR(255),
-    category VARCHAR(255),
-    operation_type VARCHAR(255),
-    issued_received VARCHAR(255),
-    released_received VARCHAR(255),
-    note TEXT,
-    submitted BOOLEAN DEFAULT FALSE
-);
-'''
-cursor.execute(create_delivery_notes_table_query)
-conn.commit()
+

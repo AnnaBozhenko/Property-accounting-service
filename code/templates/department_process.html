@@ -47,11 +47,11 @@
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_categorical" onchange="crossOutText('create_record_categorical')">
-            <label for="create_record_categorical" class="checkbox-label"><a href="#">Створити запис (категорійний)</a></label>
+            <label for="create_record_categorical" class="checkbox-label"><a href="{{ url_for('categorical_record') }}">Створити запис (категорійний)</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_invoice" onchange="crossOutText('create_record_invoice')">
-            <label for="create_record_invoice" class="checkbox-label"><a href="#">Створити запис (в накладній)</a></label>
+            <label for="create_record_invoice" class="checkbox-label"><a href="{{ url_for('nakladna') }}">Створити запис (в накладній)</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_report" onchange="crossOutText('create_report')">
