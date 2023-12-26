@@ -1,0 +1,45 @@
+<!-- edit_follow_letter.html -->
+{% extends 'base.html' %}
+
+{% block title %}Edit Follow Letter{% endblock %}
+
+{% block content %}
+    <h2>Відредагувати сопроводжувальний лист</h2>
+    <form method="POST" action="{{ url_for('edit_follow_letter', follow_letter_id=follow_letter.id) }}">
+        {{ form.hidden_tag() }}
+
+        <!-- Add form fields here -->
+        <div class="form-group">
+            {{ form.military_property_name.label(class="form-label") }}
+            {{ form.military_property_name(class="form-control", value=follow_letter.military_property_name) }}
+        </div>
+        <div class="form-group">
+            {{ form.sender.label(class="form-label") }}
+            {{ form.sender(class="form-control", value=follow_letter.sender) }}
+        </div>
+        <div class="form-group">
+            {{ form.recipient.label(class="form-label") }}
+            {{ form.recipient(class="form-control", value=follow_letter.recipient) }}
+        </div>
+        <div class="form-group">
+            {{ form.vehicle_number.label(class="form-label") }}
+            {{ form.vehicle_number(class="form-control", value=follow_letter.vehicle_number) }}
+        </div>
+        <div class="form-group">
+            {{ form.expediter.label(class="form-label") }}
+            {{ form.expediter(class="form-control", value=follow_letter.expediter) }}
+        </div>
+        <div class="form-group">
+            {{ form.dispatch_date.label(class="form-label") }}
+            {{ form.dispatch_date(class="form-control", value=follow_letter.dispatch_date) }}
+        </div>
+        <div class="form-group">
+            {{ form.delivery_date.label(class="form-label") }}
+            {{ form.delivery_date(class="form-control", value=follow_letter.delivery_date) }}
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,72 @@
+<!-- record_book_entry.html -->
+{% extends 'base.html' %}
+
+{% block title %}Перелік супроводжувальних листів{% endblock %}
+{% block content %}
+    <style>
+        /* Add styles directly to the HTML */
+        .record-header {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .record-info {
+            margin-bottom: 20px;
+        }
+
+        .record-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .record-table th, .record-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .record-button {
+            background-color: #888;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <h2 class="record-header">Перелік супроводжувальних листів</h2>
+
+    <div class="record-info">
+        <p>Служба: РАО</p>
+        <p>Код складу: ххххх</p>
+    </div>
+
+    <table class="record-table">
+        <thead>
+            <tr>
+                <th>Назва військового майна</th>
+                <th>Експедитор</th>
+                <th>Відправник листа</th>
+                <th>Редагувати/підписати</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record.military_property_name }}</td>
+                    <td>{{ record.expediter }}</td>
+                    <td>{{ record.full_name }}</td>
+                    <td>
+                        <a href="{{ url_for('edit_follow_letter', follow_letter_id=record.id) }}">Редагувати</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+{% endblock %}

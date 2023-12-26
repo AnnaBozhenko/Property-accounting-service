@@ -45,10 +45,12 @@ class Message(db.Model):
     sent_at = db.Column(db.TIMESTAMP, default=db.func.current_timestamp())
     type = db.Column(db.String(255), nullable=True)
     invoice_number = db.Column(db.Integer, db.ForeignKey('delivery_notes.id'), nullable=True)
+    folllow_letter_num = db.Column(db.Integer, db.ForeignKey('follow_letter.id'), nullable=True)
     # Define relationships
     sender = relationship('User', foreign_keys=[sender_id], backref='sent_messages')
     recipient = relationship('User', foreign_keys=[recipient_id], backref='received_messages')
     invoice = relationship('DeliveryNotes', foreign_keys=[invoice_number], backref='invoices')
+    folllow_letter = relationship('FollowLetter', foreign_keys=[folllow_letter_num], backref='folllow_letter')
 
 # Define the Record model
 class EntryRecord(db.Model):
@@ -104,6 +106,28 @@ class WriteDeliveryForm(FlaskForm):
     issued_received = StringField('Відпущено(прийняти)', validators=[DataRequired()])
     note = StringField('Примітка')
 
+
+class FollowLetter(db.Model):
+    __tablename__ = 'follow_letter'
+    id = db.Column(db.Integer, primary_key=True)
+    military_property_name = db.Column(db.String(255), nullable=True)
+    sender = db.Column(db.String(255), nullable=True)
+    recipient = db.Column(db.String(255), nullable=True)
+    vehicle_number = db.Column(db.String(255), nullable=True)
+    expediter = db.Column(db.String(255), nullable=True)
+    order_number = db.Column(db.String(255), nullable=True)
+    dispatch_date = db.Column(db.Date, nullable=True)
+    delivery_date = db.Column(db.Date, nullable=True)
+    
+class WriteFollowLetterForm(FlaskForm):
+    military_property_name = StringField('Назва військового майна')
+    sender = StringField('Відправник')
+    recipient = StringField('Одержувач')
+    vehicle_number = StringField('Номер транспортного засобу')
+    expediter = StringField('Експедитор')
+    order_number = StringField('Номер наряду')
+    dispatch_date = DateField('Дата відправлення')
+    delivery_date = DateField('Дата доставки')
 
 @app.route('/')
 def home():
@@ -213,29 +237,6 @@ def compose():
     else:
         return redirect(url_for('login'))
 
-    """if request.method == 'POST':
-        department_number = request.form['department_number']  # Corrected line
-        recipient_name = request.form['recipient_name']
-
-        # Query only the id of the user based on department number and recipient name
-        recipient_id = User.query \
-            .filter(User.department_number == department_number, User.full_name == recipient_name) \
-            .with_entities(User.id) \
-            .scalar()
-
-        if recipient_id:
-            subject = request.form['subject']
-            body = request.form['body']
-            email_type = request.form['email_type']  # Get the selected email type
-
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body, type=email_type)
-            db.session.add(new_message)
-            db.session.commit()
-
-            return redirect(url_for('sent'))
-        else:
-            # User not found, display an error message
-            flash('Wrong recipient.', 'error')"""
 
     return render_template('write.html', user=user)
 
@@ -332,7 +333,9 @@ def write_report():
 
 @app.route('/write_follow_letter', methods=['GET', 'POST'])
 def write_follow_letter():
+    form = WriteFollowLetterForm()
     user = session.get('user')
+
     if request.method == 'POST':
         department_number = request.form['department_number']  # Corrected line
         recipient_name = request.form['recipient_name']
@@ -345,19 +348,32 @@ def write_follow_letter():
 
         if recipient_id:
             subject = request.form['subject']
-            body = request.form['body']
-            email_type = request.form['email_type']  # Get the selected email type
+            email_type = "Супроводжувальний лист"  # Get the selected email type
 
-            new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, body=body,
-                                  type=email_type)
-            db.session.add(new_message)
-            db.session.commit()
+            if form.validate_on_submit():
+                follow_letter = FollowLetter(
+                    military_property_name=form.military_property_name.data,
+                    sender=form.sender.data,
+                    recipient=form.recipient.data,
+                    vehicle_number=form.vehicle_number.data,
+                    expediter=form.expediter.data,
+                    order_number=form.order_number.data,
+                    dispatch_date=form.dispatch_date.data,
+                    delivery_date=form.delivery_date.data
+                )
+
+                db.session.add(follow_letter)
+                db.session.commit()
+
+                new_message = Message(sender_id=user[0], recipient_id=recipient_id, subject=subject, type=email_type, folllow_letter_num=follow_letter.id)
+                db.session.add(new_message)
+                db.session.commit()
 
             return redirect(url_for('sent'))
         else:
             # User not found, display an error message
             flash('Wrong recipient.', 'error')
-    return render_template('write_follow_letter.html', user=user)
+    return render_template('write_follow_letter.html', form=form, user=user)
 
 
 # Autocomplete recipient route
@@ -509,6 +525,20 @@ def edit_delivery(delivery_id):
 
     return render_template('edit_delivery.html', form=form, delivery_note=delivery_note)
 
+@app.route('/edit_follow_letter/<int:follow_letter_id>', methods=['GET', 'POST'])
+def edit_follow_letter(follow_letter_id):
+    follow_letter = FollowLetter.query.get(follow_letter_id)
+    form = WriteFollowLetterForm(obj=follow_letter)
+
+    if form.validate_on_submit():
+        form.populate_obj(follow_letter)
+        db.session.commit()
+
+        flash('Follow letter updated successfully!', 'success')
+        return redirect(url_for('edit_follow_letter', follow_letter_id=follow_letter_id))
+
+    return render_template('edit_follow_letter.html', form=form, follow_letter=follow_letter)
+
 @app.route('/submit_signature', methods=['POST'])
 def submit_signature():
     delivery_id = request.form.get('delivery_id')
@@ -543,6 +573,26 @@ def record_delivery_notes():
         )
 
         return render_template('record_delivery_notes.html', user=user, records=all_records)
+    else:
+        return redirect(url_for('login'))
+    
+
+@app.route('/record_follow_letter')
+def record_follow_letter():
+    user = session.get('user')
+
+    if user:
+        # Fetch all records from the entry_records table
+        all_records = (
+            FollowLetter.query
+            .join(Message, FollowLetter.id == Message.folllow_letter_num)  # Join with the 'messages' table
+            .join(User, User.id == Message.sender_id)  # Join with the 'users' table for sender's full_name\
+            .filter(Message.recipient_id == user[0])
+            .add_columns(User.full_name, FollowLetter.id, FollowLetter.military_property_name, FollowLetter.expediter)
+            .all()
+        )
+
+        return render_template('record_follow_letter.html', user=user, records=all_records)
     else:
         return redirect(url_for('login'))
 

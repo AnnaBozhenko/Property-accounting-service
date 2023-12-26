@@ -26,6 +26,40 @@ CREATE TABLE IF NOT EXISTS users (
 cursor.execute(create_table_query)
 conn.commit()
 
+# Add this table creation query to the existing create_users_table function
+create_messages_table_query = '''
+CREATE TABLE IF NOT EXISTS messages (
+    id SERIAL PRIMARY KEY,
+    sender_id INT REFERENCES users(id),
+    recipient_id INT REFERENCES users(id),
+    subject VARCHAR(255) NOT NULL,
+    body TEXT,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    type VARCHAR(255) NOT NULL,
+    invoice_number INT REFERENCES delivery_notes(id),
+    folllow_letter_num INT REFERENCES folllow_letter(id)
+);
+'''
+cursor.execute(create_messages_table_query)
+conn.commit()
+
+# Function to create the records table if not exists
+create_entry_records_table_query = '''
+CREATE TABLE IF NOT EXISTS entry_records (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    purpose VARCHAR(255) NOT NULL,
+    rank VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    patronymic VARCHAR(255) NOT NULL
+);
+'''
+
+# Execute the query and commit the changes
+cursor.execute(create_entry_records_table_query)
+conn.commit()
 create_delivery_notes_table_query = '''
 CREATE TABLE delivery_notes (
     id SERIAL PRIMARY KEY,
@@ -52,37 +86,18 @@ CREATE TABLE delivery_notes (
 cursor.execute(create_delivery_notes_table_query)
 conn.commit()
 
-# Add this table creation query to the existing create_users_table function
-create_messages_table_query = '''
-CREATE TABLE IF NOT EXISTS messages (
+create_follow_letter_table_query = '''
+CREATE TABLE follow_letter (
     id SERIAL PRIMARY KEY,
-    sender_id INT REFERENCES users(id),
-    recipient_id INT REFERENCES users(id),
-    subject VARCHAR(255) NOT NULL,
-    body TEXT,
-    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    type VARCHAR(255) NOT NULL,
-    invoice_number INT REFERENCES delivery_notes(id)
+    military_property_name VARCHAR(255) NOT NULL,
+    sender VARCHAR(255) NOT NULL,
+    recipient VARCHAR(255) NOT NULL,
+    vehicle_number VARCHAR(255),
+    expediter VARCHAR(255),
+    order_number VARCHAR(255),
+    dispatch_date DATE,
+    delivery_date DATE
 );
 '''
-cursor.execute(create_messages_table_query)
+cursor.execute(create_follow_letter_table_query)
 conn.commit()
-
-# Function to create the records table if not exists
-create_entry_records_table_query = '''
-CREATE TABLE IF NOT EXISTS entry_records (
-    id SERIAL PRIMARY KEY,
-    date DATE NOT NULL,
-    time TIME NOT NULL,
-    purpose VARCHAR(255) NOT NULL,
-    rank VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
-    patronymic VARCHAR(255) NOT NULL
-);
-'''
-
-# Execute the query and commit the changes
-cursor.execute(create_entry_records_table_query)
-conn.commit()
-
