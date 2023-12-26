@@ -1,10 +1,8 @@
-<!-- compose.html -->
 {% extends 'base.html' %}
 
-{% block title %}Compose{% endblock %}
+{% block title %}Write Follow Letter{% endblock %}
+
 {% block content %}
-    <!DOCTYPE html>
-    <html lang="en">
     <head>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -35,49 +33,84 @@
             });
         </script>
     </head>
-    <body>
-        <h2>Написати</h2>
-        <form method="POST">
-            <div>
-                <label for="email_type">Type of Email:</label>
-                <a name="email_type" id="email_type" value="Рапорт">Супроводжувальний лист</a>
-            </div>
-            <div>
-                <label for="department_number">Department Number:</label>
-                <input type="text" id="department_number" name="department_number" required>
-            </div>
+    <h2>Створити Супровідний лист</h2>
+    <form method="POST" action="{{ url_for('write_follow_letter') }}">
+        {{ form.hidden_tag() }}
 
-            <div>
-                <label for="recipient_name">Recipient:</label>
-                <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
-                <input type="hidden" id="recipient_id" name="recipient_id">
-            </div>
+        <div>
+            <label for="department_number">Department Number:</label>
+            <input type="text" id="department_number" name="department_number" required>
+        </div>
 
-            <div>
-                <label>Subject:</label>
-                <input type="text" name="subject" required>
-            </div>
+        <div>
+            <label for="recipient_name">Recipient:</label>
+            <input type="text" id="recipient_name" name="recipient_name" required autocomplete="off">
+            <input type="hidden" id="recipient_id" name="recipient_id">
+        </div>
 
-            <div>
-                <label>Body:</label>
-                <textarea name="body" required></textarea>
-            </div>
+        <div>
+            <label>Subject:</label>
+            <input type="text" name="subject" required>
+        </div>
 
-            <div>
-                <input type="submit" value="Send">
-            </div>
-        </form>
-
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul class="flashes">
-                    {% for message in messages %}
-                    <div class="message_flash">{{ message }}</div>
-                    {% endfor %}
-                </ul>
+        <div class="form-group">
+            {{ form.military_property_name.label(class="form-label") }}
+            {{ form.military_property_name(class="form-control") }}
+            {% if form.military_property_name.errors %}
+                <small class="text-danger">{{ form.military_property_name.errors[0] }}</small>
             {% endif %}
-        {% endwith %}
-    </body>
-    </html>
+        </div>
 
+        <div class="form-group">
+            {{ form.sender.label(class="form-label") }}
+            {{ form.sender(class="form-control") }}
+            {% if form.sender.errors %}
+                <small class="text-danger">{{ form.sender.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.recipient.label(class="form-label") }}
+            {{ form.recipient(class="form-control") }}
+            {% if form.recipient.errors %}
+                <small class="text-danger">{{ form.recipient.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.vehicle_number.label(class="form-label") }}
+            {{ form.vehicle_number(class="form-control") }}
+            {% if form.vehicle_number.errors %}
+                <small class="text-danger">{{ form.vehicle_number.errors[0] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.expediter.label(class="form-label") }}
+            {{ form.expediter(class="form-control") }}
+            {% if form.expediter.errors %}
+                <small class="text-danger">{{ form.expediter.errors[0] }}</small>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.dispatch_date.label(class="form-label") }}
+            {{ form.dispatch_date(class="form-control") }}
+            {% if form.dispatch_date.errors %}
+                <small class="text-danger">{{ form.dispatch_date.errors[0] }}</small>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Підписати та надіслати форму</button>
+        </div>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <div class="message_flash">{{ message }}</div>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
 {% endblock %}

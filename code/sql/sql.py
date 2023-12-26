@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS messages (
     body TEXT,
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     type VARCHAR(255) NOT NULL,
-    invoice_number INT REFERENCES delivery_notes(id)
+    invoice_number INT REFERENCES delivery_notes(id),
+    folllow_letter_num INT REFERENCES folllow_letter(id)
 );
 '''
 cursor.execute(create_messages_table_query)
@@ -83,4 +84,20 @@ CREATE TABLE delivery_notes (
 );
 '''
 cursor.execute(create_delivery_notes_table_query)
+conn.commit()
+
+create_follow_letter_table_query = '''
+CREATE TABLE follow_letter (
+    id SERIAL PRIMARY KEY,
+    military_property_name VARCHAR(255) NOT NULL,
+    sender VARCHAR(255) NOT NULL,
+    recipient VARCHAR(255) NOT NULL,
+    vehicle_number VARCHAR(255),
+    expediter VARCHAR(255),
+    order_number VARCHAR(255),
+    dispatch_date DATE,
+    delivery_date DATE
+);
+'''
+cursor.execute(create_follow_letter_table_query)
 conn.commit()

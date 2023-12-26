@@ -35,7 +35,7 @@
     <ul class="checkbox-list">
         <li class="checkbox-item">
             <input type="checkbox" id="receive_invoice" onchange="crossOutText('write_book_person')">
-            <label for="receive_invoice" class="checkbox-label"><a href="#">Запис у книгу відвідувань експедитора</a></label>
+            <label for="receive_invoice" class="checkbox-label"><a href="{{ url_for('record_book_entry') }}">Запис у книгу відвідувань</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="record_book" onchange="crossOutText('receive_invoice')">
@@ -43,7 +43,7 @@
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_numbered" onchange="crossOutText('receive_follow_letter')">
-            <label for="create_record_numbered" class="checkbox-label"><a href="#">Отримати супровідний лист</a></label>
+            <label for="create_record_numbered" class="checkbox-label"><a href="{{ url_for('record_follow_letter') }}">Отримати супровідний лист</a></label>
         </li>
         <li class="checkbox-item">
             <input type="checkbox" id="create_record_categorical" onchange="crossOutText('write_book_comission')">
