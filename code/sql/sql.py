@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS messages (
     subject VARCHAR(255) NOT NULL,
     body TEXT,
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    type VARCHAR(255) NOT NULL
+    type VARCHAR(255) NOT NULL,
+    invoice_number INT REFERENCES delivery_notes(id)
 );
 '''
 cursor.execute(create_messages_table_query)
